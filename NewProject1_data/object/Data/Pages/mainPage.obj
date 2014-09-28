@@ -1,0 +1,215 @@
+<PG ID="C7388CCE-7E7A-4DB2-A6AC-AB4201920AF7" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgAddInformation" BgClr="808080" BgTparent="0" BgPicName="default_pagebg.png" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="0" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
+	<EDGE X="0" Y="0" W="640" H="1136" />
+	<POS Pos="3" SMode="32" />
+	<BODY>
+		<CONTAINER ID="84F93776-7CDA-4854-AC50-F290067B55E8" Nm="cntCourtForm" Vsb="1" TouchEnabled="1" AutoSize="0">
+			<LCT X="50%" Y="0%" W="900%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+			<Layout LayoutType="1" LayoutOrientation="1" LayoutAlignment="0" LayoutHorizontalGap="0" LayoutVerticalGap="10" />
+			<STYLE BrClr="313031" BrW="0" BgTparent="0" BgClr="808080" />
+			<ITEMS>
+				<CONTAINER ID="DC28F2F2-013B-4C12-B9C6-E3A11F30CA41" Nm="cntName" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="34%" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="F840BD67-0878-44D1-87EE-83DAC18BCBE6" Nm="edtName" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Sahanın adı&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="0000ff" HTAlgn="0" VTAlgn="1" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+					</ITEMS>
+				</CONTAINER>
+				<CONTAINER ID="279C9EFA-8726-417E-B2B4-8729D8E9CB25" Nm="cntDescription" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="146%" W="1000%" H="200%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="3769AE37-6D08-44F1-A2C4-94D7E9FA3097" Nm="edtDescription" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" MtLn="1" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Saha açıklaması&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="0000ff" HTAlgn="0" VTAlgn="0" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+					</ITEMS>
+				</CONTAINER>
+				<CONTAINER ID="88B9D353-D879-41AB-8C7B-D8B04E0DEAAE" Nm="cntPublicAccessible" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="371" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="F72310EE-CE40-40EC-B432-45F4CCDA8A80" Nm="edtPublicAccessible" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Halka açık mı?&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="cc6633" HTAlgn="0" VTAlgn="1" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+						<BTN ID="2925CA9D-8382-441C-85DE-2C4CFBD54E57" Nm="txtPublicSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
+							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
+							<DATA>
+								<PRM Nm="Bind" Val="&quot;&quot;" />
+							</DATA>
+							<ONPRESSED script="pgAddInformation_txtPublicSelector_OnPressed(e);" />
+						</BTN>
+					</ITEMS>
+				</CONTAINER>
+				<CONTAINER ID="BAFB3088-005A-4BFD-A0D9-558D9445F299" Nm="cntOpenHours" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="495" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="8C9BE3CF-2702-4048-8237-FA539D2C919F" Nm="edtOpenHours" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Kapanış saati&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="cc6633" HTAlgn="0" VTAlgn="1" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+						<BTN ID="3EAFDC19-B767-4724-86CF-1A80C70C8144" Nm="txtOpenHoursSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
+							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
+							<DATA>
+								<PRM Nm="Bind" Val="&quot;&quot;" />
+							</DATA>
+							<ONPRESSED script="pgAddInformation_txtOpenHoursSelector_OnPressed(e);" />
+						</BTN>
+					</ITEMS>
+				</CONTAINER>
+				<CONTAINER ID="144B378E-0027-4F0F-A5AC-C9C1678E8FA9" Nm="cntIsIndoor" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="619" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="D7AD88A5-4155-4A69-8B7D-80481B1B39C4" Nm="edtIsIndoor" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Saha tipi&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="cc6633" HTAlgn="0" VTAlgn="1" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+						<BTN ID="7F0DB04D-109E-42A1-A81F-990B224B4C8E" Nm="txtIsIndoorSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
+							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
+							<DATA>
+								<PRM Nm="Bind" Val="&quot;&quot;" />
+							</DATA>
+							<ONPRESSED script="pgAddInformation_txtIsIndoorSelector_OnPressed(e);" />
+						</BTN>
+					</ITEMS>
+				</CONTAINER>
+				<CONTAINER ID="B6B9C9F6-2430-4E2E-A2FD-E06568292F7C" Nm="cntHasLighting" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="743" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="E50442E2-C2BC-4328-AE70-1B6C2BC411E2" Nm="edtHasLighting" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Işıklandırması var mı?&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="cc6633" HTAlgn="0" VTAlgn="1" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+						<BTN ID="740CCACA-8B9B-4512-9DD5-B8BA9220F8AE" Nm="txtHasLightingSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
+							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
+							<DATA>
+								<PRM Nm="Bind" Val="&quot;&quot;" />
+							</DATA>
+							<ONPRESSED script="pgAddInformation_txtHasLightingSelector_OnPressed(e);" />
+						</BTN>
+					</ITEMS>
+				</CONTAINER>
+				<CONTAINER ID="C4A877DD-6B62-4A5D-8B61-A1E8EAE10187" Nm="cntCategory" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="867" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="017C585C-1137-4C6D-BB07-B17BF504C161" Nm="edtCategory" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Mekan&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="cc6633" HTAlgn="0" VTAlgn="1" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+						<BTN ID="C24D8B87-2A68-4C8C-A5E3-81E8DFD8ED52" Nm="txtCategorySelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
+							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
+							<DATA>
+								<PRM Nm="Bind" Val="&quot;&quot;" />
+							</DATA>
+							<ONPRESSED script="pgAddInformation_txtCategorySelector_OnPressed(e);" />
+						</BTN>
+					</ITEMS>
+				</CONTAINER>
+				<CONTAINER ID="80C7042C-CDEB-4355-9BA9-521B5D13D6E4" Nm="cntBasketCount" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="991" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="00B77220-BDF5-458D-8EB2-86445BA2DE98" Nm="edtBasketCount" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Pota sayısı&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="cc6633" HTAlgn="0" VTAlgn="1" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+						<BTN ID="E2DB2741-AD72-4B7A-A64C-B4B380730248" Nm="txtBasketCount" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
+							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
+							<DATA>
+								<PRM Nm="Bind" Val="&quot;&quot;" />
+							</DATA>
+							<ONPRESSED script="pgAddInformation_txtBasketCount_OnPressed(e);" />
+						</BTN>
+					</ITEMS>
+				</CONTAINER>
+			</ITEMS>
+		</CONTAINER>
+	</BODY>
+	<EVENTS>
+		<ONSHOW script="pgAddInformation_Self_OnShow(e);" />
+		<ONKEYP script="pgAddInformation_Self_OnKeyPress(e);" />
+	</EVENTS>
+</PG>

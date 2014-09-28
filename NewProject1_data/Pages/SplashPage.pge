@@ -1,0 +1,6 @@
+<SMF xsi:schemaLocation="http://developer.smartface.biz/SAS/schema/4.1.0/sasObjects.xsd sasObjects.xsd" xmlns="http://developer.smartface.biz/SAS/schema/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<UI>
+		<SplashPage id="00000000-0000-0000-0000-000000000002" name="SplashPage" backgroundImage="default_splash" fillColor="#ffffff" imageFillType="SMF.UI.ImageFillType.stretch" imagePosition="SMF.UI.Alignment.topLeft" limitObjectsInPageBoundaries="false" lockOrientation="false" showStatusBar="false" showNavigationBar="false" showActionBar="false" touchEnabled="true" templatePageID="00000000-0000-0000-0000-100000000001">
+		</SplashPage>
+	</UI>
+</SMF>

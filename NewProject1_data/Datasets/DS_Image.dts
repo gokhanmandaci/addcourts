@@ -1,0 +1,14 @@
+<OBJECT>
+	<Dataset name="DS_Image" parent="00000000-0000-0000-0000-100000000001" parentMode="-1" width="0px" height="0px" left="0px" top="0px" lockAutoSize="false" lockAutoPosition="false" visible="true" touchEnabled="true">
+		<TypeSpecific Table="00000000-0000-0000-0000-100000000001" AutoCommit="0" FastCommit="0" PreserveState="0" SelectAll="1" isServerObject="0">
+			<Fields>
+				<Field ID="1" Name="tblImage.data" TblID="D8818DB6-BBCE-4875-B7E0-4D179CBA0743" />
+			</Fields>
+			<SqlText>
+			<![CDATA[
+SELECT "tblImage".* FROM "tblImage"
+			]]>
+			</SqlText>
+		</TypeSpecific>
+	</Dataset>
+</OBJECT>

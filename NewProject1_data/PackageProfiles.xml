@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageProfiles>
+	<profile Name="Default" >
+		<android>
+			<folder name="android/drawable" />
+			<folder name="android/drawable-hdpi" />
+			<folder name="android/drawable-mdpi" />
+			<folder name="android/drawable-xhdpi" />
+			<folder name="android/drawable-xxhdpi" />
+			<folder name="android/drawable-small-ldpi" />			
+			<folder name="android/drawable-small-mdpi" />
+			<folder name="android/drawable-small-hdpi" />
+			<folder name="android/drawable-small-xhdpi" />	
+			<folder name="android/drawable-normal-ldpi" />	
+			<folder name="android/drawable-normal-mdpi" />
+			<folder name="android/drawable-normal-hdpi" />
+			<folder name="android/drawable-normal-xhdpi" />			
+			<folder name="android/drawable-large-ldpi" />			
+			<folder name="android/drawable-large-mdpi" />
+			<folder name="android/drawable-large-hdpi" />
+			<folder name="android/drawable-large-xhdpi" />	
+			<folder name="android/drawable-xlarge-ldpi" />	
+			<folder name="android/drawable-xlarge-mdpi" />
+			<folder name="android/drawable-xlarge-hdpi" />
+			<folder name="android/drawable-xlarge-xhdpi" />					
+			<!--  Uncomment this block for adding necessary information to android manifest
+			<compatible-screens>
+				<screen android:screenSize="normal" android:screenDensity="mdpi" />
+			</compatible-screens>
+			<supports-screens 
+				android:smallScreens="false" 
+				android:normalScreens="true"
+				android:largeScreens="false"
+				android:xlargeScreens="false"
+				/>
+			-->
+		</android>
+	</profile>
+	<!--<profile Name="Profile1" >
+		<android>
+			<folder name="android/drawable-normal-mdpi" />
+			<folder name="android/drawable" />
+			<folder name="android/drawable-mdpi" />
+			<folder name="android/drawable-hdpi" />
+			<folder name="android/drawable-xhdpi" />
+			<folder name="android/drawable-xxhdpi" />
+		</android>
+	</profile>-->
+</packageProfiles>

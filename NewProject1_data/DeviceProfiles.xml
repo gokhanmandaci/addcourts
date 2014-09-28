@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceProfiles>
+	<iOS>
+		<Device Name="iPhone 3(s)" Width="320" Height="480"  Dpi ="163" ScreenShortCut="Y" isRetina="false" OSVersion="6.0"/>
+		<Device Name="iPhone 4(s)" Width="640" Height="960" Dpi ="326"  ScreenShortCut="Y" isRetina="true" OSVersion="7.1"/>
+		<Device Name="iPhone 5(s)" Width="640" Height="1136" Dpi ="326" ScreenShortCut="Y" isRetina="true" OSVersion="7.1"/>
+		<Device Name="iPad (1-2)" Width="1024" Height="768" Dpi ="132" ScreenShortCut="Y" isRetina="true" OSVersion="7.1"/>
+		<Device Name="New iPad (3-4-Air)" Width="2048" Height="1536" Dpi ="264" ScreenShortCut="Y"  isRetina="true" OSVersion="7.1"/>
+		<Device Name="iPad Mini" Width="1024" Height="768" Dpi ="163" ScreenShortCut="Y" isRetina="true" OSVersion="7.1"/>
+	</iOS>
+	<Android>
+		<Device Name="Nexus 5" Width="1080" Height="1920" Dpi ="445" ScreenShortCut="Y" Folder="android/drawable-xxhdpi" StatusBarHeight="75" ActionBarHeight="144" APILevel="19"/>
+		<Device Name="Galaxy S III" Width="720" Height="1280" Dpi ="306" ScreenShortCut="Y" Folder="android/drawable-xhdpi" StatusBarHeight="50" ActionBarHeight="96" APILevel="18"/>
+		<Device Name="Galaxy S4" Width="1080" Height="1920" Dpi ="441" ScreenShortCut="Y" Folder="android/drawable-xxhdpi" StatusBarHeight="75" ActionBarHeight="144" APILevel="19"/>
+		<Device Name="Galaxy S4 Mini" Width="540" Height="960" Dpi ="256" ScreenShortCut="Y" Folder="android/drawable-hdpi" StatusBarHeight="38" ActionBarHeight="72" APILevel="18"/>
+		<Device Name="Galaxy Note" Width="800" Height="1280" Dpi ="285" ScreenShortCut="N" Folder="android/drawable-hdpi" StatusBarHeight="50" ActionBarHeight="96" APILevel="16"/>
+		<Device Name="Galaxy Note II" Width="720" Height="1280" Dpi ="267" ScreenShortCut="N" Folder="android/drawable-hdpi" StatusBarHeight="50" ActionBarHeight="96" APILevel="19"/>
+		<Device Name="Galaxy Note 3" Width="1080" Height="1920" Dpi ="388" ScreenShortCut="Y" Folder="android/drawable-xxhdpi" StatusBarHeight="75" ActionBarHeight="144" APILevel="19"/>
+	</Android>
+</DeviceProfiles>

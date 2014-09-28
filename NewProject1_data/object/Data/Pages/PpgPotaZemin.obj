@@ -1,0 +1,98 @@
+<PG ID="ECD7FEBE-29B5-4DFB-932A-9347DBF55D5F" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgPotaZemin" BgClr="eff3ef" BgTparent="0" BgPicName="default_pagebg.png" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="0" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
+	<EDGE X="0" Y="0" W="640" H="1136" />
+	<POS Pos="3" SMode="32" />
+	<BODY>
+		<CONTAINER ID="6280DA34-9A3C-4D8B-B864-94E9934ABF0B" Nm="cntCourtForm" Vsb="1" TouchEnabled="1" AutoSize="0">
+			<LCT X="50%" Y="0%" W="900%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+			<Layout LayoutType="1" LayoutOrientation="1" LayoutAlignment="0" LayoutHorizontalGap="0" LayoutVerticalGap="10" />
+			<STYLE BrClr="313031" BrW="0" BgTparent="0" BgClr="eff3ef" />
+			<ITEMS>
+				<CONTAINER ID="6239D269-24B4-4E8D-93BD-BAF7D62938D5" Nm="cntBasketQuality" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="34%" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="6B122E89-A620-4D3C-BB0B-5C6C82CDEC10" Nm="edtBasketQuality" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Pota Kalitesi&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="cc6633" HTAlgn="0" VTAlgn="1" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+						<BTN ID="B34FF132-BE20-422F-947C-79B4088A034B" Nm="txtBasketQuality" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
+							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
+							<DATA>
+								<PRM Nm="Bind" Val="&quot;&quot;" />
+							</DATA>
+							<ONPRESSED script="pgPotaZemin_txtBasketQuality_OnPressed(e);" />
+						</BTN>
+					</ITEMS>
+				</CONTAINER>
+				<CONTAINER ID="7BB81045-9CB6-44AB-8198-0118F2DB5649" Nm="cntFloorQuality" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="134" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="D1C51E24-D114-4F21-9C56-E7605984E973" Nm="edtFloorQuality" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Zemin Kalitesi&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="cc6633" HTAlgn="0" VTAlgn="1" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+						<BTN ID="4A6378ED-0A2A-4BC0-BBC4-077539411728" Nm="txtFloorQuality" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
+							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
+							<DATA>
+								<PRM Nm="Bind" Val="&quot;&quot;" />
+							</DATA>
+							<ONPRESSED script="pgPotaZemin_txtFloorQuality_OnPressed(e);" />
+						</BTN>
+					</ITEMS>
+				</CONTAINER>
+				<CONTAINER ID="F76762B3-F9F5-4FF7-9B92-646C9851AA3F" Nm="cntSecurity" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="258" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
+					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+					<ITEMS>
+						<EDIT ID="C929CDB8-2437-41F2-9E12-ED4D5EDE84DF" Nm="edtSecurity" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<PlaceHolder>
+								<PRM Nm="Bind" Val="&quot;Güvenlik&quot;" />
+							</PlaceHolder>
+							<FONT FName="Default" FSize="8p" AdjustFSize="0" MinFSize="7" FColor="7a7a7a" FStyle="0" Undrln="0" />
+							<STYLE BgTparent="0" BgClr="ffffff" BrClr="999999" BrW="1" ActBrClr="cc6633" HTAlgn="0" VTAlgn="1" TxtDir="0" HorizontalGapValue="5" />
+							<DATA>
+								<PRM Nm="Bind" Val="" />
+							</DATA>
+						</EDIT>
+						<BTN ID="E01E2D3C-DCE1-4928-9551-469464BF3822" Nm="txtSecurity" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
+							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
+							<DATA>
+								<PRM Nm="Bind" Val="&quot;&quot;" />
+							</DATA>
+							<ONPRESSED script="pgPotaZemin_txtSecurity_OnPressed(e);" />
+						</BTN>
+					</ITEMS>
+				</CONTAINER>
+			</ITEMS>
+		</CONTAINER>
+	</BODY>
+	<EVENTS>
+		<ONSHOW script="pgPotaZemin_Self_OnShow(e);" />
+		<ONKEYP script="pgPotaZemin_Self_OnKeyPress(e);" />
+	</EVENTS>
+</PG>
