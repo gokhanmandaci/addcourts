@@ -1,11 +1,11 @@
-<PG ID="C7388CCE-7E7A-4DB2-A6AC-AB4201920AF7" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgAddInformation" BgClr="808080" BgTparent="0" BgPicName="default_pagebg.png" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="0" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
+<PG ID="C7388CCE-7E7A-4DB2-A6AC-AB4201920AF7" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgAddInformation" BgClr="999999" BgTparent="0" BgPicName="" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="0" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
 	<EDGE X="0" Y="0" W="640" H="1136" />
 	<POS Pos="3" SMode="32" />
 	<BODY>
 		<CONTAINER ID="84F93776-7CDA-4854-AC50-F290067B55E8" Nm="cntCourtForm" Vsb="1" TouchEnabled="1" AutoSize="0">
 			<LCT X="50%" Y="0%" W="900%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 			<Layout LayoutType="1" LayoutOrientation="1" LayoutAlignment="0" LayoutHorizontalGap="0" LayoutVerticalGap="10" />
-			<STYLE BrClr="313031" BrW="0" BgTparent="0" BgClr="808080" />
+			<STYLE BrClr="313031" BrW="0" BgTparent="-1" BgClr="808080" />
 			<ITEMS>
 				<CONTAINER ID="DC28F2F2-013B-4C12-B9C6-E3A11F30CA41" Nm="cntName" Vsb="1" TouchEnabled="1" AutoSize="0">
 					<LCT X="50%" Y="34%" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
@@ -22,6 +22,7 @@
 							<DATA>
 								<PRM Nm="Bind" Val="" />
 							</DATA>
+							<ONEXIT script="pgAddInformation_edtName_OnExit(e);" />
 						</EDIT>
 					</ITEMS>
 				</CONTAINER>
@@ -40,6 +41,7 @@
 							<DATA>
 								<PRM Nm="Bind" Val="" />
 							</DATA>
+							<ONEXIT script="pgAddInformation_edtDescription_OnExit(e);" />
 						</EDIT>
 					</ITEMS>
 				</CONTAINER>

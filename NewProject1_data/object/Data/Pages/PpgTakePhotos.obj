@@ -1,11 +1,11 @@
-<PG ID="382BFB75-FE66-4864-9530-59196E924205" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgTakePhotos" BgClr="eff3ef" BgTparent="0" BgPicName="default_pagebg.png" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="0" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
+<PG ID="382BFB75-FE66-4864-9530-59196E924205" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgTakePhotos" BgClr="999999" BgTparent="0" BgPicName="" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="0" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
 	<EDGE X="0" Y="0" W="640" H="1136" />
-	<POS Pos="3" SMode="32" />
+	<POS Pos="13" SMode="32" />
 	<BODY>
 		<CONTAINER ID="7166C219-943B-449D-A226-9D077FE217F1" Nm="cntMain" Vsb="1" TouchEnabled="1" AutoSize="0">
-			<LCT X="46%" Y="28%" W="906%" H="614%" Z="0" Anc="2" LockAutoSize="0" LockAutoPosition="0" />
-			<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
-			<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
+			<LCT X="47%" Y="28%" W="906%" H="614%" Z="0" Anc="2" LockAutoSize="0" LockAutoPosition="0" />
+			<Layout LayoutType="1" LayoutOrientation="1" LayoutAlignment="0" LayoutHorizontalGap="0" LayoutVerticalGap="0" />
+			<STYLE BrClr="313031" BrW="0" BgTparent="-1" BgClr="eff3ef" />
 			<ITEMS>
 				<CONTAINER ID="04341BFB-0C1F-4E73-BEAD-942902FC6F2E" Nm="cntHead" Vsb="1" TouchEnabled="1" AutoSize="0">
 					<LCT X="0%" Y="0%" W="1000%" H="609%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
@@ -19,19 +19,11 @@
 							<ITEMS>
 								<PIC ID="98FE39BF-138F-432A-821F-28FA8F8A988F" Nm="imgMainPhoto" Vsb="1" Alpha="100" TouchEnabled="1">
 									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-									<POS Pos="15" SMode="64" EnableZoom="0" EnableScroll="0" EnableCache="0" />
+									<POS Pos="15" SMode="2" EnableZoom="0" EnableScroll="0" EnableCache="0" />
 									<DATA>
 										<PRM Nm="Bind" Val="resources://placeholder_main_photo.png" />
 									</DATA>
 								</PIC>
-								<BTN ID="BC896EAB-0B4D-4276-92CC-C97D56162542" Nm="txtMainPhoto" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="0" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
-									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-									<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
-									<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
-									<DATA>
-										<PRM Nm="Bind" Val="&quot;&quot;" />
-									</DATA>
-								</BTN>
 								<BTN ID="4913CE04-2DAD-4DB0-AA7B-3534C357B648" Nm="imgBtnMainPhoto" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" Type="0">
 									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 									<FONT FName="Default" FSize="8p" FColor="333333" PressedFColor="ffffff" DisabledFColor="ff0000" FStyle="0" Undrln="0" />
@@ -52,7 +44,7 @@
 						</CONTAINER>
 						<LBL ID="089ED0A6-3894-4AF9-9D48-D3F4B39D08BF" Nm="lblMainPhoto" Type="2" Mask="" Vsb="1" Alpha="100" TouchEnabled="1" MtLn="0" PxlEdg="3" ShwScrl="0" AutoLnk="0" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0" AutoSize="0">
 							<LCT X="0%" Y="903%" W="1000%" H="97%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-							<FONT FName="Default" FSize="6p" FUnit="pt" AdjustFSize="1" MinFSize="5" FColor="666666" FStyle="0" Undrln="0" />
+							<FONT FName="Default" FSize="6p" FUnit="pt" AdjustFSize="1" MinFSize="5" FColor="f2f2f2" FStyle="0" Undrln="0" />
 							<STYLE BgTparent="1" BgClr="cccccc" BrClr="999999" BrW="0" HTAlgn="1" VTAlgn="0" TxtDir="0" HorizontalGapValue="0" />
 							<DATA>
 								<PRM Nm="Bind" Val="&quot;Kapak Fotoğrafı&quot;" />
@@ -77,14 +69,6 @@
 										<PRM Nm="Bind" Val="resources://placeholder_sub_photos.png" />
 									</DATA>
 								</PIC>
-								<BTN ID="B1140DF2-4565-4FDC-AD76-53F0C499B10B" Nm="txtFirstPhoto" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="0" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
-									<LCT X="0" Y="0" W="178" H="177" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-									<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
-									<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
-									<DATA>
-										<PRM Nm="Bind" Val="&quot;&quot;" />
-									</DATA>
-								</BTN>
 								<BTN ID="0D617D59-02EA-4E34-B8BB-1D1F3D49B4C4" Nm="imgBtnFirstPhoto" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" Type="0">
 									<LCT X="0" Y="0" W="178" H="177" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 									<FONT FName="Default" FSize="8p" FColor="333333" PressedFColor="ffffff" DisabledFColor="ff0000" FStyle="0" Undrln="0" />
@@ -105,7 +89,7 @@
 						</CONTAINER>
 						<LBL ID="EE6543A5-EB45-4FF0-8293-D9303FB4BBE1" Nm="lblFirstPhoto" Type="2" Mask="" Vsb="1" Alpha="100" TouchEnabled="1" MtLn="0" PxlEdg="3" ShwScrl="0" AutoLnk="0" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0" AutoSize="0">
 							<LCT X="0" Y="215" W="178" H="37" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-							<FONT FName="Default" FSize="6p" FUnit="pt" AdjustFSize="1" MinFSize="5" FColor="666666" FStyle="0" Undrln="0" />
+							<FONT FName="Default" FSize="6p" FUnit="pt" AdjustFSize="1" MinFSize="5" FColor="f2f2f2" FStyle="0" Undrln="0" />
 							<STYLE BgTparent="1" BgClr="cccccc" BrClr="999999" BrW="0" HTAlgn="1" VTAlgn="0" TxtDir="0" HorizontalGapValue="0" />
 							<DATA>
 								<PRM Nm="Bind" Val="&quot;Fotoğraf 1&quot;" />
@@ -123,14 +107,6 @@
 										<PRM Nm="Bind" Val="resources://placeholder_sub_photos.png" />
 									</DATA>
 								</PIC>
-								<BTN ID="0E29B464-2288-4024-AC94-775F2D4E8DC7" Nm="txtSecondPhoto" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="0" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
-									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-									<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
-									<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
-									<DATA>
-										<PRM Nm="Bind" Val="&quot;&quot;" />
-									</DATA>
-								</BTN>
 								<BTN ID="0DB694F4-4E83-4F6E-9202-D829E79CE46A" Nm="imgBtnSecondPhoto" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" Type="0">
 									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 									<FONT FName="Default" FSize="8p" FColor="333333" PressedFColor="ffffff" DisabledFColor="ff0000" FStyle="0" Undrln="0" />
@@ -151,7 +127,7 @@
 						</CONTAINER>
 						<LBL ID="8F1F0827-C1E4-4BDF-9C37-F57392EA5A65" Nm="lblSecondPhoto" Type="2" Mask="" Vsb="1" Alpha="100" TouchEnabled="1" MtLn="0" PxlEdg="3" ShwScrl="0" AutoLnk="0" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0" AutoSize="0">
 							<LCT X="200" Y="215" W="178" H="37" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-							<FONT FName="Default" FSize="6p" FUnit="pt" AdjustFSize="1" MinFSize="5" FColor="666666" FStyle="0" Undrln="0" />
+							<FONT FName="Default" FSize="6p" FUnit="pt" AdjustFSize="1" MinFSize="5" FColor="f2f2f2" FStyle="0" Undrln="0" />
 							<STYLE BgTparent="1" BgClr="cccccc" BrClr="999999" BrW="0" HTAlgn="1" VTAlgn="0" TxtDir="0" HorizontalGapValue="0" />
 							<DATA>
 								<PRM Nm="Bind" Val="&quot;Fotoğraf 2&quot;" />
@@ -169,14 +145,6 @@
 										<PRM Nm="Bind" Val="resources://placeholder_sub_photos.png" />
 									</DATA>
 								</PIC>
-								<BTN ID="EF4B807B-E783-4A41-AE90-E14F229EA83A" Nm="txtThirdPhoto" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="0" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
-									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-									<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
-									<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
-									<DATA>
-										<PRM Nm="Bind" Val="&quot;&quot;" />
-									</DATA>
-								</BTN>
 								<BTN ID="BCDB3F5E-D33E-4A66-85FE-EE2298E00D21" Nm="imgBtnThirdPhoto" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" Type="0">
 									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 									<FONT FName="Default" FSize="8p" FColor="333333" PressedFColor="ffffff" DisabledFColor="ff0000" FStyle="0" Undrln="0" />
@@ -197,7 +165,7 @@
 						</CONTAINER>
 						<LBL ID="05F377F1-8D0D-4C5B-832F-FCF6C773F58A" Nm="lblThirdPhoto" Type="2" Mask="" Vsb="1" Alpha="100" TouchEnabled="1" MtLn="0" PxlEdg="3" ShwScrl="0" AutoLnk="0" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0" AutoSize="0">
 							<LCT X="402" Y="212" W="178" H="40" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-							<FONT FName="Default" FSize="6p" FUnit="pt" AdjustFSize="1" MinFSize="5" FColor="666666" FStyle="0" Undrln="0" />
+							<FONT FName="Default" FSize="6p" FUnit="pt" AdjustFSize="1" MinFSize="5" FColor="f2f2f2" FStyle="0" Undrln="0" />
 							<STYLE BgTparent="1" BgClr="cccccc" BrClr="999999" BrW="0" HTAlgn="1" VTAlgn="0" TxtDir="0" HorizontalGapValue="0" />
 							<DATA>
 								<PRM Nm="Bind" Val="&quot;Fotoğraf 3&quot;" />
