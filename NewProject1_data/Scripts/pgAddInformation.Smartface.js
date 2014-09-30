@@ -1,3 +1,42 @@
+function runValidationAddInformation() {
+    var alertStr = "";
+    if (Pages.pgAddInformation.cntCourtForm.cntName.edtName.text == "") {
+        alertStr += "Lütfen saha ismi alanını doldurunuz. \n\n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntDescription.edtDescription.text == "") {
+        alertStr += "Lütfen saha açıklaması yapınız. \n\n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntPublicAccessible.edtPublicAccessible.text == "") {
+        alertStr += "Lütfen halka açık mı alanını seçiniz. \n\n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntOpenHours.edtOpenHours.text == "") {
+        alertStr += "Lütfen kapanış saatini seçiniz. \n\n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntIsIndoor.edtIsIndoor.text == "") {
+        alertStr += "Lütfen saha tipini seçiniz. \n\n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntHasLighting.edtHasLighting.text == "") {
+        alertStr += "Lütfen ışıklandırma alanını seçiniz. \n\n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntCategory.edtCategory.text == "") {
+        alertStr += "Lütfen mekan alanını seçiniz. \n\n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntBasketCount.edtBasketCount.text == "") {
+        alertStr += "Lütfen pota sayısını seçiniz. \n\n";
+    }
+    if (alertStr != "") {
+        alert({
+            title : 'Uyarı',
+            message : alertStr,
+            firstButtonText : "Tamam",
+            OnFirstButtonPressed : function () {
+                //bos
+            }
+        });
+    } else {
+        Pages.pgPotaZemin.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
+    }
+}
 function pgAddInformation_Self_OnKeyPress(e) {
     if (e.keyCode === 4) {
         Application.exit();
@@ -11,18 +50,14 @@ function pgAddInformation_Self_OnShow() {
         this.actionBar.displayShowTitleEnabled = true;
         this.actionBar.title = 'Sahalar';
         this.actionBar.subtitle = 'Saha Özellikleri';
-        //this.actionBar.displayShowHomeEnabled = true;
+        this.actionBar.displayShowHomeEnabled = true;
         this.actionBar.icon = 'icon.png';
         var item1 = new SMF.UI.Android.MenuItem({
                 id : '1',
                 title : 'İleri',
                 showAsAction : SMF.UI.Android.ShowAsAction.ifRoom,
                 onSelected : function (e) {
-                    //TODO: First make a validation about the page. Collect data for properties of court and jump to other section for taking photos.
-                    if (runValidation(0)) {
-                        aalert(JSON.stringify(addCourtJSON));
-                        Pages.pgPotaZemin.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
-                    }
+                    runValidationAddInformation();
                 }
             });
         this.actionBar.menuItems = [item1];
@@ -31,14 +66,11 @@ function pgAddInformation_Self_OnShow() {
         var item1 = new SMF.UI.iOS.BarButtonItem({
                 title : "İleri",
                 onSelected : function () {
-                    //TODO: First make a validation about the page. Collect data for properties of court and jump to other section for taking photos.
-                    Pages.pgPotaZemin.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
+                    runValidationAddInformation();
                 }
             });
         this.navigationItem.rightBarButtonItems = [item1];
     }
-    addCourtJSON.latitude = myLat;
-    addCourtJSON.longitude = myLng;
 }
 function pgAddInformation_txtPublicSelector_OnPressed(e) {
     var isPublicText = Pages.pgAddInformation.cntCourtForm.cntPublicAccessible.edtPublicAccessible.text.split(": ");
@@ -106,7 +138,7 @@ function pgAddInformation_txtCategorySelector_OnPressed(e) {
         function () {});
 }
 function pgAddInformation_txtBasketCount_OnPressed(e) {
-    var basketCountText = Pages.pgAddInformation.cntCourtForm.cntHasLighting.edtHasLighting.text.split(": ");
+    var basketCountText = Pages.pgAddInformation.cntCourtForm.cntBasketCount.edtBasketCount.text.split(": ");
     var basketCountIndex;
     basketCountIndex = basketCountArr.indexOf(basketCountText[1]);
     pick(
@@ -117,4 +149,14 @@ function pgAddInformation_txtBasketCount_OnPressed(e) {
     },
         function () {},
         function () {});
+}
+function pgAddInformation_edtName_OnExit(e) {
+    if (Pages.pgAddInformation.cntCourtForm.cntName.edtName.text != "") {
+        addCourtJSON.name = Pages.pgAddInformation.cntCourtForm.cntName.edtName.text;
+    }
+}
+function pgAddInformation_edtDescription_OnExit(e){
+    if (Pages.pgAddInformation.cntCourtForm.cntDescription.edtDescription.text != "") {
+        addCourtJSON.properties.description = Pages.pgAddInformation.cntCourtForm.cntDescription.edtDescription.text;
+    }
 }

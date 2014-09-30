@@ -7,7 +7,7 @@
 	<ANDROIDPRODUCTKEY AndroidProductKey="" />
 	<ANDROIDSENDERID AndroidSenderID="" />
 	<APPLICATIONCACHESIZE ApplicationCacheSize="50" />
-	<APPLICATIONNAME ApplicationName="smartface demo" />
+	<APPLICATIONNAME ApplicationName="sahalar" />
 	<NAVIGATIONBARUPDATE NavigationBarUpdate="1" />
 	<RESOURCES>
 	</RESOURCES>
@@ -27,7 +27,7 @@
 		</TABLE>
 	</DATATABLES>
 	<DATASETS>
-		<DATASET ID="47092372-ED31-45C1-ADC7-BF716AE15507" Name="DS_Image" TableID="D8818DB6-BBCE-4875-B7E0-4D179CBA0743" AutoCommit="0" FastCommit="0" PreserveState="0">
+		<DATASET ID="32D4F9A0-9A11-4233-9B81-5F6C1FC2EC8E" Name="DS_Image" TableID="D8818DB6-BBCE-4875-B7E0-4D179CBA0743" AutoCommit="0" FastCommit="0" PreserveState="0">
 			<SQLTEXT>
 			<![CDATA[
 SELECT "tblImage".* FROM "tblImage"

@@ -20,7 +20,7 @@
 	<AndroidProductKey AndroidProductKey="" />
 	<AndroidSenderID AndroidSenderID="" />
 	<ApplicationCacheSize ApplicationCacheSize="50" />
-	<ApplicationName ApplicationName="smartface demo" />
+	<ApplicationName ApplicationName="sahalar" />
 	<Logging ServerUrl="" MaxLogSize="30">
 		<Events LogError="0" LogWarning="0" LogDebug="0" />
 	</Logging>

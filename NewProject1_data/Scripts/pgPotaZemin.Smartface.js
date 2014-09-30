@@ -1,3 +1,29 @@
+function runValidationBasketFloorSecurity() {
+    var alertStr = "";
+    if (Pages.pgPotaZemin.cntCourtForm.cntBasketQuality.edtBasketQuality.text == "") {
+        alertStr += "Lütfen pota kalitesini derecelendiriniz. \n\n";
+    }
+    if (Pages.pgPotaZemin.cntCourtForm.cntFloorQuality.edtFloorQuality.text == "") {
+        alertStr += "Lütfen zemin kalitesini derecelendiriniz. \n\n";
+    }
+    if (Pages.pgPotaZemin.cntCourtForm.cntSecurity.edtSecurity.text == "") {
+        alertStr += "Lütfen güvenlik kalitesini derecelendiriniz. \n\n";
+    }
+    if (alertStr != "") {
+        alert({
+            title : 'Uyarı',
+            message : alertStr,
+            firstButtonText : "Tamam",
+            OnFirstButtonPressed : function () {
+                //bos
+            }
+        });
+    } else {
+        Dialogs.dgWait.show();
+        addCourtData.requestString = JSON.stringify(addCourtJSON);
+        addCourtData.run(true);
+    }
+}
 function pgPotaZemin_Self_OnKeyPress(e) {
     if (e.keyCode == 4) {
         Pages.back();
@@ -21,8 +47,7 @@ function pgPotaZemin_Self_OnShow(e) {
                 title : 'İleri',
                 showAsAction : SMF.UI.Android.ShowAsAction.ifRoom,
                 onSelected : function (e) {
-                    //TODO: Add these 3 properties to the JSON data 
-                    Pages.pgTakePhotos.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
+                    runValidationBasketFloorSecurity();
                 }
             });
         this.actionBar.menuItems = [item1];
@@ -31,8 +56,7 @@ function pgPotaZemin_Self_OnShow(e) {
         var item1 = new SMF.UI.iOS.BarButtonItem({
                 title : "İleri",
                 onSelected : function () {
-                    //TODO: Add these 3 properties to the JSON data
-                    Pages.pgTakePhotos.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
+                    runValidationBasketFloorSecurity();
                 }
             });
         this.navigationItem.rightBarButtonItems = [item1];

@@ -1,3 +1,7 @@
+var commonRequestHeaders = [
+    'Accept:*/*',
+    'Content-Type:application/json'
+];
 //ADD COURT Params
 var addCourtJSON = {
     "name" : "",
@@ -13,31 +17,48 @@ var addCourtJSON = {
         "basketQuality" : "",
         "floorQuality" : "",
         "security" : "",
-        "basketCount":""
-    },
-    "images" : {
-        "imageCover" : "",
-        "image1" : "",
-        "image2" : "",
-        "image3" : ""
+        "basketCount" : ""
     }
 };
-var addCourt = {
-    //TODO: Complete the parameters after service is opened.
+var addCourtData = {
     httpMethod : 'POST',
     timeout : 15
 };
+var addCourtResponseObj;
 //ADD COURT Service Integration
-var addCourtService = new SMF.Net.WebClient({
-        URL : '',
-        httpMethod : addCourt.httpMethod,
-        requestHeaders : '',
-        contentType : '',
+var addCourtData = new SMF.Net.WebClient({
+        URL : 'http://212.174.34.90:9998/hooper-rest/courts/',
+        httpMethod : "POST",
+        requestHeaders : commonRequestHeaders,
+        contentType : "application/json",
         onSyndicationSuccess : function (e) {
-            //TODO: Show user that the adding process completed successfully.
+            addCourtResponseObj = JSON.parse(this.responseText);
+            courtID = addCourtResponseObj.id;
+            Pages.pgTakePhotos.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
+            Dialogs.dgWait.close();
         },
         onServerError : function (e) {
             //TODO: Show server error
+            alert("error");
         },
-        timeOutInterval : addCourt.timeout
+        timeOutInterval : addCourtData.timeout
+    });
+//ADD Images Service Integration
+//TODO: wait for change in content type of this service
+var addImageRequestHeaders = [
+    'Accept:*/*',
+    'Content-Type: multipart/form-data',
+    'Content-Disposition: form-data'
+];
+var addImage = new SMF.Net.WebClient({
+        httpMethod : "PUT",
+        requestHeaders : addImageRequestHeaders,
+        contentType : "multipart/form-data",
+        onSyndicationSuccess : function (e) {
+            alert("Succ");
+            Dialogs.dgUploading.close();
+        },
+        onServerError : function (e) {
+            alert("error " + this.status);
+        }
     });

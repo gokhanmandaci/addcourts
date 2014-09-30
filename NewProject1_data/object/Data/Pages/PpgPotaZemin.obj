@@ -5,7 +5,7 @@
 		<CONTAINER ID="6280DA34-9A3C-4D8B-B864-94E9934ABF0B" Nm="cntCourtForm" Vsb="1" TouchEnabled="1" AutoSize="0">
 			<LCT X="50%" Y="0%" W="900%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 			<Layout LayoutType="1" LayoutOrientation="1" LayoutAlignment="0" LayoutHorizontalGap="0" LayoutVerticalGap="10" />
-			<STYLE BrClr="313031" BrW="0" BgTparent="-1" BgClr="eff3ef" />
+			<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 			<ITEMS>
 				<CONTAINER ID="6239D269-24B4-4E8D-93BD-BAF7D62938D5" Nm="cntBasketQuality" Vsb="1" TouchEnabled="1" AutoSize="0">
 					<LCT X="50%" Y="34%" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />

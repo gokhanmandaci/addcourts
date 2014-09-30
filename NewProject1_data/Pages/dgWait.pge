@@ -1,0 +1,10 @@
+<SMF xsi:schemaLocation="http://developer.smartface.biz/SAS/schema/4.1.0/sasObjects.xsd sasObjects.xsd" xmlns="http://developer.smartface.biz/SAS/schema/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<UI>
+		<Dialog id="E510FDB6-DD90-4BAC-8F97-8DA89D3D98B6" name="dgWait" width="100%" height="100%" left="0%" top="0%" anchor.left="false" anchor.top="false" anchor.right="false" anchor.bottom="false" backgroundImage="" fillColor="#f0f0f0" imageFillType="SMF.UI.ImageFillType.tile" imagePosition="SMF.UI.Alignment.topLeft" limitObjectsInPageBoundaries="false" lockOrientation="false" showStatusBar="false" showNavigationBar="false" showActionBar="false" touchEnabled="true" parentDrawPage="pgPotaZemin" bgTransparent="true">
+			<controls>
+				<Rectangle name="Rectangle1" id="96098A14-E5C5-4099-A379-07283FADB467" parent="00000000-0000-0000-0000-100000000001" parentMode="-1" width="100%" height="100%" left="0%" top="0%" lockAutoSize="false" lockAutoPosition="false" visible="true" touchEnabled="true" designVisible="true" enabled="true" backgroundTransparent="true" fillColor="#000000" alpha="0,68" anchor.left="true" anchor.top="true" anchor.right="false" anchor.bottom="false" borderColor="#666666" borderWidth="0" startColor="#666666" endColor="#000000" gradientFill="false" roundedEdge="0" gradientOrientation="SMF.UI.GradientOrientation.leftToRight" />
+				<ActivityIndicator name="ActivityIndicator1" id="3A0DBA81-91E8-4F5D-A7B8-AB0C11408F00" parent="00000000-0000-0000-0000-100000000001" parentMode="-1" width="36px" height="36px" left="47,1875011920929%" top="48,4154939651489%" lockAutoSize="false" lockAutoPosition="false" visible="true" touchEnabled="true" designVisible="true" anchor.left="true" anchor.top="true" anchor.right="false" anchor.bottom="false" enabled="true" style="SMF.UI.ActivityIndicatorStyle.whiteLarge" />
+			</controls>
+		</Dialog>
+	</UI>
+</SMF>

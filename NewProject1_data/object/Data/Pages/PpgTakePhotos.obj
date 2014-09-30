@@ -5,7 +5,7 @@
 		<CONTAINER ID="7166C219-943B-449D-A226-9D077FE217F1" Nm="cntMain" Vsb="1" TouchEnabled="1" AutoSize="0">
 			<LCT X="47%" Y="28%" W="906%" H="614%" Z="0" Anc="2" LockAutoSize="0" LockAutoPosition="0" />
 			<Layout LayoutType="1" LayoutOrientation="1" LayoutAlignment="0" LayoutHorizontalGap="0" LayoutVerticalGap="0" />
-			<STYLE BrClr="313031" BrW="0" BgTparent="-1" BgClr="eff3ef" />
+			<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 			<ITEMS>
 				<CONTAINER ID="04341BFB-0C1F-4E73-BEAD-942902FC6F2E" Nm="cntHead" Vsb="1" TouchEnabled="1" AutoSize="0">
 					<LCT X="0%" Y="0%" W="1000%" H="609%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />

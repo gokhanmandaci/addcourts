@@ -7,7 +7,7 @@
 	<ANDROIDPRODUCTKEY AndroidProductKey="" />
 	<ANDROIDSENDERID AndroidSenderID="" />
 	<APPLICATIONCACHESIZE ApplicationCacheSize="50" />
-	<APPLICATIONNAME ApplicationName="smartface demo" />
+	<APPLICATIONNAME ApplicationName="sahalar" />
 	<NAVIGATIONBARUPDATE NavigationBarUpdate="1" />
 	<RESOURCES>
 	</RESOURCES>

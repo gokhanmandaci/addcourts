@@ -21,6 +21,7 @@ var isIndoorArr = ["Açık", "Kapalı"];
 var categoryArr = ["Park", "Site içi", "Lise", "Üniversite", "Spor Salonu"];
 var qualityArr = ["1", "2", "3", "4", "5"];
 var basketCountArr = ["1", "2", "3", "4", "4+"];
+var courtID;
 function Global_Events_OnError(e) {
     switch (e.type) {
     case "Server Error":
@@ -67,13 +68,18 @@ function openCameraAndCrop(_whichPhoto) {
                                     format : format,
                                     compressionRate : compRate,
                                     onSuccess : function (e) {
+                                        Dialogs.dgUploading.show();
                                         if (_whichPhoto == 0) {
-                                            Pages.pgTakePhotos.cntMain.cntFirstPhoto.imgBtnFirstPhoto.defaultImage = e.image;
+                                            Pages.pgTakePhotos.cntMain.cntSub.cntFirstPhoto.imgBtnFirstPhoto.defaultImage = e.image;
                                         } else if (_whichPhoto == 1) {
-                                            Pages.pgTakePhotos.cntMain.cntSecondPhoto.imgBtnSecondPhoto.defaultImage = e.image;
+                                            Pages.pgTakePhotos.cntMain.cntSub.cntSecondPhoto.imgBtnSecondPhoto.defaultImage = e.image;
                                         } else {
-                                            Pages.pgTakePhotos.cntMain.cntThirdPhoto.imgBtnThirdPhoto.defaultImage = e.image;
+                                            Pages.pgTakePhotos.cntMain.cntSub.cntThirdPhoto.imgBtnThirdPhoto.defaultImage = e.image;
                                         }
+                                        addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
+                                        // TODO: update here for iOS
+                                        addImage.request = new SMF.IO.File(e.image);
+                                        addImage.run(true);
                                     },
                                     onError : function (e) {
                                         alert("Hata 1");
@@ -109,7 +115,7 @@ function openCameraAndResize() {
                 onSuccess : function (e) {
                     imWidth = im.width;
                     imHeight = im.height;
-                    var pageImageWitdh = Pages.pgTakePhotos.cntMain.cntMainPhoto.imgBtnMainPhoto.width;
+                    var pageImageWitdh = Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.width;
                     var resizedHeight = (imHeight / imWidth) * pageImageWitdh;
                     var resizedHeightRounded = Math.floor(resizedHeight);
                     im.resize({
@@ -118,7 +124,11 @@ function openCameraAndResize() {
                         format : format,
                         compressionRate : compRate,
                         onSuccess : function (e) {
-                            Pages.pgTakePhotos.cntMain.cntMainPhoto.imgBtnMainPhoto.defaultImage = e.image;
+                            Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.defaultImage = e.image;
+                            addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
+                            // TODO: update here for iOS
+                            addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
+                            addImage.run(true);
                         },
                         onError : function (e) {
                             alert("Error: " + e.message);
@@ -151,27 +161,36 @@ function calcCrow(lat1, lon1, lat2, lon2) {
 function toRad(Value) {
     return Value * Math.PI / 180;
 }
-function runValidation(pageIndx) {
+function runValidationAddInformation() {
     var alertStr = "";
     if (Pages.pgAddInformation.cntCourtForm.cntName.edtName.text == "") {
         alertStr += "Lütfen saha ismi alanını doldurunuz. \n";
-    } else if (Pages.pgAddInformation.cntCourtForm.cntDescription.edtDescription.text == "") {
-        alertStr += "Lütfen saha açıklaması yapınız. \n";
-    } else if (Pages.pgAddInformation.cntCourtForm.cntPublicAccessible.edtPublicAccessible.text == "") {
-        alertStr += "Lütfen halka açık mı alanını seçiniz. \n";
-    } else if (Pages.pgAddInformation.cntCourtForm.cntOpenHours.edtOpenHours.text == "") {
-        alertStr += "Lütfen kapanış saatini seçiniz. \n";
-    } else if (Pages.pgAddInformation.cntCourtForm.cntIsIndoor.edtIsIndoor.text == "") {
-        alertStr += "Lütfen saha tipini seçiniz. \n";
-    } else if (Pages.pgAddInformation.cntCourtForm.cntHasLighting.edtHasLighting.text == "") {
-        alertStr += "Lütfen ışıklandırma alanını seçiniz. \n";
-    } else if (Pages.pgAddInformation.cntCourtForm.cntCategory.edtCategory.text == "") {
-        alertStr += "Lütfen mekan alanını seçinizç \n";
     }
-    if(alertStr != ""){
+    if (Pages.pgAddInformation.cntCourtForm.cntDescription.edtDescription.text == "") {
+        alertStr += "Lütfen saha açıklaması yapınız. \n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntPublicAccessible.edtPublicAccessible.text == "") {
+        alertStr += "Lütfen halka açık mı alanını seçiniz. \n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntOpenHours.edtOpenHours.text == "") {
+        alertStr += "Lütfen kapanış saatini seçiniz. \n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntIsIndoor.edtIsIndoor.text == "") {
+        alertStr += "Lütfen saha tipini seçiniz. \n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntHasLighting.edtHasLighting.text == "") {
+        alertStr += "Lütfen ışıklandırma alanını seçiniz. \n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntCategory.edtCategory.text == "") {
+        alertStr += "Lütfen mekan alanını seçiniz. \n";
+    }
+    if (Pages.pgAddInformation.cntCourtForm.cntBasketCount.edtBasketCount.text == "") {
+        alertStr += "Lütfen pota sayısını seçiniz. \n";
+    }
+    if (alertStr != "") {
         alert(alertStr);
-        return false;
-    }else{
-        return true;
+    } else {
+        alert(JSON.stringify(addCourtJSON));
+        Pages.pgPotaZemin.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
     }
 }
