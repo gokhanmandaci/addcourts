@@ -47,13 +47,12 @@ var addCourtData = new SMF.Net.WebClient({
 //TODO: wait for change in content type of this service
 var addImageRequestHeaders = [
     'Accept:*/*',
-    'Content-Type: multipart/form-data',
-    'Content-Disposition: form-data'
+    'Content-Type: image/jpeg'
 ];
 var addImage = new SMF.Net.WebClient({
         httpMethod : "PUT",
         requestHeaders : addImageRequestHeaders,
-        contentType : "multipart/form-data",
+        contentType : "image/jpeg",
         onSyndicationSuccess : function (e) {
             alert("Succ");
             Dialogs.dgUploading.close();

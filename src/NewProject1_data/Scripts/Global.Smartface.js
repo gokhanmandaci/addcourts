@@ -77,8 +77,11 @@ function openCameraAndCrop(_whichPhoto) {
                                             Pages.pgTakePhotos.cntMain.cntSub.cntThirdPhoto.imgBtnThirdPhoto.defaultImage = e.image;
                                         }
                                         addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
-                                        // TODO: update here for iOS
-                                        addImage.request = new SMF.IO.File(e.image);
+                                        if (Device.deviceOS == "Android") {
+                                            addImage.request = new SMF.IO.File(e.image);
+                                        } else {
+                                            addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
+                                        }
                                         addImage.run(true);
                                     },
                                     onError : function (e) {
@@ -126,8 +129,11 @@ function openCameraAndResize() {
                         onSuccess : function (e) {
                             Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.defaultImage = e.image;
                             addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
-                            // TODO: update here for iOS
-                            addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
+                            if (Device.deviceOS == "Android") {
+                                addImage.request = new SMF.IO.File(e.image);
+                            } else {
+                                addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
+                            }
                             addImage.run(true);
                         },
                         onError : function (e) {
