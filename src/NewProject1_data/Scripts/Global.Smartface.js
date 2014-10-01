@@ -76,13 +76,14 @@ function openCameraAndCrop(_whichPhoto) {
                                         } else {
                                             Pages.pgTakePhotos.cntMain.cntSub.cntThirdPhoto.imgBtnThirdPhoto.defaultImage = e.image;
                                         }
-                                        addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
+                                        //TODO: Uncomment this for using upload service
+                                        /*addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
                                         if (Device.deviceOS == "Android") {
                                             addImage.request = new SMF.IO.File(e.image);
                                         } else {
                                             addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
                                         }
-                                        addImage.run(true);
+                                        addImage.run(true);*/
                                     },
                                     onError : function (e) {
                                         alert("Hata 1");
@@ -129,12 +130,13 @@ function openCameraAndResize() {
                         onSuccess : function (e) {
                             Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.defaultImage = e.image;
                             addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
-                            if (Device.deviceOS == "Android") {
+                            //TODO: Uncomment this for using upload service
+                            /*if (Device.deviceOS == "Android") {
                                 addImage.request = new SMF.IO.File(e.image);
                             } else {
                                 addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
                             }
-                            addImage.run(true);
+                            addImage.run(true);*/
                         },
                         onError : function (e) {
                             alert("Error: " + e.message);
@@ -166,37 +168,4 @@ function calcCrow(lat1, lon1, lat2, lon2) {
 // Converts numeric degrees to radians
 function toRad(Value) {
     return Value * Math.PI / 180;
-}
-function runValidationAddInformation() {
-    var alertStr = "";
-    if (Pages.pgAddInformation.cntCourtForm.cntName.edtName.text == "") {
-        alertStr += "Lütfen saha ismi alanını doldurunuz. \n";
-    }
-    if (Pages.pgAddInformation.cntCourtForm.cntDescription.edtDescription.text == "") {
-        alertStr += "Lütfen saha açıklaması yapınız. \n";
-    }
-    if (Pages.pgAddInformation.cntCourtForm.cntPublicAccessible.edtPublicAccessible.text == "") {
-        alertStr += "Lütfen halka açık mı alanını seçiniz. \n";
-    }
-    if (Pages.pgAddInformation.cntCourtForm.cntOpenHours.edtOpenHours.text == "") {
-        alertStr += "Lütfen kapanış saatini seçiniz. \n";
-    }
-    if (Pages.pgAddInformation.cntCourtForm.cntIsIndoor.edtIsIndoor.text == "") {
-        alertStr += "Lütfen saha tipini seçiniz. \n";
-    }
-    if (Pages.pgAddInformation.cntCourtForm.cntHasLighting.edtHasLighting.text == "") {
-        alertStr += "Lütfen ışıklandırma alanını seçiniz. \n";
-    }
-    if (Pages.pgAddInformation.cntCourtForm.cntCategory.edtCategory.text == "") {
-        alertStr += "Lütfen mekan alanını seçiniz. \n";
-    }
-    if (Pages.pgAddInformation.cntCourtForm.cntBasketCount.edtBasketCount.text == "") {
-        alertStr += "Lütfen pota sayısını seçiniz. \n";
-    }
-    if (alertStr != "") {
-        alert(alertStr);
-    } else {
-        alert(JSON.stringify(addCourtJSON));
-        Pages.pgPotaZemin.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
-    }
 }

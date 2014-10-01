@@ -57,7 +57,9 @@ function pgAddInformation_Self_OnShow() {
                 title : 'İleri',
                 showAsAction : SMF.UI.Android.ShowAsAction.ifRoom,
                 onSelected : function (e) {
-                    runValidationAddInformation();
+                    //TODO: change this with service usage and validations
+                    //runValidationAddInformation();
+                    Pages.pgPotaZemin.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
                 }
             });
         this.actionBar.menuItems = [item1];
@@ -66,7 +68,9 @@ function pgAddInformation_Self_OnShow() {
         var item1 = new SMF.UI.iOS.BarButtonItem({
                 title : "İleri",
                 onSelected : function () {
-                    runValidationAddInformation();
+                    //TODO: change this with service usage and validations
+                    //runValidationAddInformation();
+                    Pages.pgPotaZemin.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
                 }
             });
         this.navigationItem.rightBarButtonItems = [item1];

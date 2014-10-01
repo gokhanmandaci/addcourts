@@ -1,4 +1,4 @@
-<SMARTFACEPROJECT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SmartfaceProjectPlayerUpdated.xsd" XmlVersion="1015" LType="1" Name="NewProject1" UID="1667327604" SID="-1" SName="No service selected" WS="http://www.smartface.biz" PublishUrl="http://www.smartface.biz" LastObjectID="39EDCFF6-B5ED-4CB0-A251-8730B6989EFA" ActiveProfileIndex="0" Version="1.0.0" BiDiMode="0">
+<SMARTFACEPROJECT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SmartfaceProjectPlayerUpdated.xsd" XmlVersion="1015" LType="1" Name="NewProject1" UID="1667327604" SID="-1" SName="No service selected" WS="http://www.smartface.biz" PublishUrl="http://www.smartface.biz" LastObjectID="39EDCFF6-B5ED-4CB0-A251-8730B6989EFA" ActiveProfileIndex="1" Version="1.0.0" BiDiMode="0">
 	<MainPageSettings Name="pgAddInformation" />
 	<Platform ScreenHeight="1136" ScreenWidth="640" Dpi="326" AndroidVirtualDevice="" />
 	<SocialNetworks FacebookAppUID="" FacebookAppSecret="" TwitterConsumerKey="" TwitterConsumerSecret="" />

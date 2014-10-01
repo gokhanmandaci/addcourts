@@ -2,7 +2,7 @@
 	<EDGE X="0%" Y="0%" W="1000%" H="1000%" />
 	<POS Pos="3" SMode="32" />
 	<BODY>
-		<RECT ID="96098A14-E5C5-4099-A379-07283FADB467" Nm="Rectangle1" Vsb="1" Alpha="70" TouchEnabled="1" Clr="000000" BrW="0" Fill="1" BrClr="666666" PxlEdg="0">
+		<RECT ID="96098A14-E5C5-4099-A379-07283FADB467" Nm="Rectangle1" Vsb="1" Alpha="68" TouchEnabled="1" Clr="000000" BrW="0" Fill="1" BrClr="666666" PxlEdg="0">
 			<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 			<ROT Angle="0" />
 			<GRAD FillGrad="0" GSColor="666666" GEColor="000000" GOrientation="0" />

@@ -1,18 +1,18 @@
-<PG ID="C7388CCE-7E7A-4DB2-A6AC-AB4201920AF7" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgAddInformation" BgClr="999999" BgTparent="0" BgPicName="" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="0" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
+<PG ID="C7388CCE-7E7A-4DB2-A6AC-AB4201920AF7" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgAddInformation" BgClr="999999" BgTparent="0" BgPicName="" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="1" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
 	<EDGE X="0" Y="0" W="640" H="1136" />
 	<POS Pos="3" SMode="32" />
 	<BODY>
-		<CONTAINER ID="84F93776-7CDA-4854-AC50-F290067B55E8" Nm="cntCourtForm" Vsb="1" TouchEnabled="1" AutoSize="0">
-			<LCT X="50%" Y="0%" W="900%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+		<CONTAINER ID="FAFE6BD9-04AF-4521-91F8-E8A0666073B1" Nm="cntCourtForm" Vsb="1" TouchEnabled="1" AutoSize="0">
+			<LCT X="50%" Y="0%" W="900%" H="998%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 			<Layout LayoutType="1" LayoutOrientation="1" LayoutAlignment="0" LayoutHorizontalGap="0" LayoutVerticalGap="10" />
-			<STYLE BrClr="313031" BrW="0" BgTparent="-1" BgClr="808080" />
+			<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="808080" />
 			<ITEMS>
-				<CONTAINER ID="DC28F2F2-013B-4C12-B9C6-E3A11F30CA41" Nm="cntName" Vsb="1" TouchEnabled="1" AutoSize="0">
+				<CONTAINER ID="2B0FCDAD-B29C-4F50-B450-52ADCC037E6E" Nm="cntName" Vsb="1" TouchEnabled="1" AutoSize="0">
 					<LCT X="50%" Y="34%" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
-						<EDIT ID="F840BD67-0878-44D1-87EE-83DAC18BCBE6" Nm="edtName" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+						<EDIT ID="934BC9C2-CF49-4CE8-B14D-4C70F06D7707" Nm="edtName" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<PlaceHolder>
 								<PRM Nm="Bind" Val="&quot;Sahanın adı&quot;" />
@@ -26,12 +26,12 @@
 						</EDIT>
 					</ITEMS>
 				</CONTAINER>
-				<CONTAINER ID="279C9EFA-8726-417E-B2B4-8729D8E9CB25" Nm="cntDescription" Vsb="1" TouchEnabled="1" AutoSize="0">
+				<CONTAINER ID="A29442F8-0844-46D7-B4AE-696CFEAB98C0" Nm="cntDescription" Vsb="1" TouchEnabled="1" AutoSize="0">
 					<LCT X="50%" Y="146%" W="1000%" H="200%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
-						<EDIT ID="3769AE37-6D08-44F1-A2C4-94D7E9FA3097" Nm="edtDescription" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" MtLn="1" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+						<EDIT ID="C7B1A194-C2CF-433D-A2FE-4349F8F2DB80" Nm="edtDescription" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" MtLn="1" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<PlaceHolder>
 								<PRM Nm="Bind" Val="&quot;Saha açıklaması&quot;" />
@@ -45,12 +45,12 @@
 						</EDIT>
 					</ITEMS>
 				</CONTAINER>
-				<CONTAINER ID="88B9D353-D879-41AB-8C7B-D8B04E0DEAAE" Nm="cntPublicAccessible" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="371" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+				<CONTAINER ID="43DCB55A-7BA1-4CF5-9317-D9D763B7C0B1" Nm="cntPublicAccessible" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="332" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
-						<EDIT ID="F72310EE-CE40-40EC-B432-45F4CCDA8A80" Nm="edtPublicAccessible" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+						<EDIT ID="F4D7704C-DE7A-4A36-80A4-2B781A916B85" Nm="edtPublicAccessible" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<PlaceHolder>
 								<PRM Nm="Bind" Val="&quot;Halka açık mı?&quot;" />
@@ -61,7 +61,7 @@
 								<PRM Nm="Bind" Val="" />
 							</DATA>
 						</EDIT>
-						<BTN ID="2925CA9D-8382-441C-85DE-2C4CFBD54E57" Nm="txtPublicSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+						<BTN ID="4C7D9650-14E4-482A-95A5-E21F742B0BA3" Nm="txtPublicSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
 							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
@@ -72,12 +72,12 @@
 						</BTN>
 					</ITEMS>
 				</CONTAINER>
-				<CONTAINER ID="BAFB3088-005A-4BFD-A0D9-558D9445F299" Nm="cntOpenHours" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="495" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+				<CONTAINER ID="856A5864-3167-4CD0-B0F7-DF0C11D26442" Nm="cntOpenHours" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="443" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
-						<EDIT ID="8C9BE3CF-2702-4048-8237-FA539D2C919F" Nm="edtOpenHours" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+						<EDIT ID="3A65803B-BD7F-48E8-9DE6-161AC65B87A4" Nm="edtOpenHours" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<PlaceHolder>
 								<PRM Nm="Bind" Val="&quot;Kapanış saati&quot;" />
@@ -88,7 +88,7 @@
 								<PRM Nm="Bind" Val="" />
 							</DATA>
 						</EDIT>
-						<BTN ID="3EAFDC19-B767-4724-86CF-1A80C70C8144" Nm="txtOpenHoursSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+						<BTN ID="739912AD-51ED-4792-BB36-5C8C613886A0" Nm="txtOpenHoursSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
 							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
@@ -99,12 +99,12 @@
 						</BTN>
 					</ITEMS>
 				</CONTAINER>
-				<CONTAINER ID="144B378E-0027-4F0F-A5AC-C9C1678E8FA9" Nm="cntIsIndoor" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="619" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+				<CONTAINER ID="00C6E666-DC06-4C20-BBF5-C7CE04F59DED" Nm="cntIsIndoor" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="554" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
-						<EDIT ID="D7AD88A5-4155-4A69-8B7D-80481B1B39C4" Nm="edtIsIndoor" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+						<EDIT ID="6426ACAC-7596-4ECF-A480-E4EEC1287174" Nm="edtIsIndoor" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<PlaceHolder>
 								<PRM Nm="Bind" Val="&quot;Saha tipi&quot;" />
@@ -115,7 +115,7 @@
 								<PRM Nm="Bind" Val="" />
 							</DATA>
 						</EDIT>
-						<BTN ID="7F0DB04D-109E-42A1-A81F-990B224B4C8E" Nm="txtIsIndoorSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+						<BTN ID="3FBFB697-47EC-4A4B-826F-F0B7B22BD6F6" Nm="txtIsIndoorSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
 							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
@@ -126,12 +126,12 @@
 						</BTN>
 					</ITEMS>
 				</CONTAINER>
-				<CONTAINER ID="B6B9C9F6-2430-4E2E-A2FD-E06568292F7C" Nm="cntHasLighting" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="743" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+				<CONTAINER ID="09CF9DF7-A628-45BD-81E4-6C43C0B40D43" Nm="cntHasLighting" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="665" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
-						<EDIT ID="E50442E2-C2BC-4328-AE70-1B6C2BC411E2" Nm="edtHasLighting" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+						<EDIT ID="27FF818E-D7A7-4A22-9018-0DB777061FE4" Nm="edtHasLighting" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<PlaceHolder>
 								<PRM Nm="Bind" Val="&quot;Işıklandırması var mı?&quot;" />
@@ -142,7 +142,7 @@
 								<PRM Nm="Bind" Val="" />
 							</DATA>
 						</EDIT>
-						<BTN ID="740CCACA-8B9B-4512-9DD5-B8BA9220F8AE" Nm="txtHasLightingSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+						<BTN ID="F0F80FCF-DC70-41A1-8654-F07701E918A8" Nm="txtHasLightingSelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
 							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
@@ -153,12 +153,12 @@
 						</BTN>
 					</ITEMS>
 				</CONTAINER>
-				<CONTAINER ID="C4A877DD-6B62-4A5D-8B61-A1E8EAE10187" Nm="cntCategory" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="867" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+				<CONTAINER ID="026D7076-B892-467B-8E8B-4715FE8D2082" Nm="cntCategory" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="776" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
-						<EDIT ID="017C585C-1137-4C6D-BB07-B17BF504C161" Nm="edtCategory" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+						<EDIT ID="8F1605CE-C9B8-4438-9398-B3FAA7FCD89B" Nm="edtCategory" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<PlaceHolder>
 								<PRM Nm="Bind" Val="&quot;Mekan&quot;" />
@@ -169,7 +169,7 @@
 								<PRM Nm="Bind" Val="" />
 							</DATA>
 						</EDIT>
-						<BTN ID="C24D8B87-2A68-4C8C-A5E3-81E8DFD8ED52" Nm="txtCategorySelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+						<BTN ID="05998C88-1A76-4878-9AEE-3446C08749FF" Nm="txtCategorySelector" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
 							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />
@@ -180,12 +180,12 @@
 						</BTN>
 					</ITEMS>
 				</CONTAINER>
-				<CONTAINER ID="80C7042C-CDEB-4355-9BA9-521B5D13D6E4" Nm="cntBasketCount" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="991" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+				<CONTAINER ID="693639E1-9A4D-4EA8-8D32-00BE6CBFB3EB" Nm="cntBasketCount" Vsb="1" TouchEnabled="1" AutoSize="0">
+					<LCT X="50%" Y="887" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
-						<EDIT ID="00B77220-BDF5-458D-8EB2-86445BA2DE98" Nm="edtBasketCount" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
+						<EDIT ID="20B8BF33-0D67-44DC-B37C-00BBA4931835" Nm="edtBasketCount" Type="2" Mask="" MaxLength="0" MinLength="0" MaxValue="0" MinValue="0" ConstraintType="0" ConstraintChars="" Vsb="1" Alpha="100" Enb="1" TouchEnabled="0" MtLn="0" PxlEdg="5" ReturnKey="0" EnableClearButton="1" EnableUpperCase="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<PlaceHolder>
 								<PRM Nm="Bind" Val="&quot;Pota sayısı&quot;" />
@@ -196,7 +196,7 @@
 								<PRM Nm="Bind" Val="" />
 							</DATA>
 						</EDIT>
-						<BTN ID="E2DB2741-AD72-4B7A-A64C-B4B380730248" Nm="txtBasketCount" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
+						<BTN ID="F1453ABD-D5B1-4A07-AA2D-1A2FEBC47534" Nm="txtBasketCount" Vsb="1" Alpha="5" Enb="1" TouchEnabled="1" Type="2" PxlEdg="3" ShwShdw="0" ShdwXOffset="0" ShdwYOffset="0" ShdwClr="0">
 							<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 							<FONT FName="Default" FSize="8p" FColor="000000" PressedFColor="ffffff" FStyle="0" Undrln="0" />
 							<STYLE BgClr="ffffff" PressedBgClr="000000" HTAlgn="1" VTAlgn="1" TxtDir="0" HorizontalGapValue="0" />

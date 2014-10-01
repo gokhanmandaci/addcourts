@@ -1,9 +1,9 @@
-<PG ID="ECD7FEBE-29B5-4DFB-932A-9347DBF55D5F" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgPotaZemin" BgClr="999999" BgTparent="0" BgPicName="" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="0" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
+<PG ID="ECD7FEBE-29B5-4DFB-932A-9347DBF55D5F" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgPotaZemin" BgClr="999999" BgTparent="0" BgPicName="" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="1" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
 	<EDGE X="0" Y="0" W="640" H="1136" />
 	<POS Pos="3" SMode="32" />
 	<BODY>
 		<CONTAINER ID="6280DA34-9A3C-4D8B-B864-94E9934ABF0B" Nm="cntCourtForm" Vsb="1" TouchEnabled="1" AutoSize="0">
-			<LCT X="50%" Y="0%" W="900%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+			<LCT X="50%" Y="0%" W="900%" H="900%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 			<Layout LayoutType="1" LayoutOrientation="1" LayoutAlignment="0" LayoutHorizontalGap="0" LayoutVerticalGap="10" />
 			<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 			<ITEMS>
@@ -35,7 +35,7 @@
 					</ITEMS>
 				</CONTAINER>
 				<CONTAINER ID="7BB81045-9CB6-44AB-8198-0118F2DB5649" Nm="cntFloorQuality" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="134" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<LCT X="50%" Y="119" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
@@ -62,7 +62,7 @@
 					</ITEMS>
 				</CONTAINER>
 				<CONTAINER ID="F76762B3-F9F5-4FF7-9B92-646C9851AA3F" Nm="cntSecurity" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="258" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<LCT X="50%" Y="228" W="1000%" H="100%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
