@@ -15,7 +15,7 @@ function runValidationBasketFloorSecurity() {
             message : alertStr,
             firstButtonText : "Tamam",
             OnFirstButtonPressed : function () {
-                //bos
+                //empty
             }
         });
     } else {
@@ -34,7 +34,7 @@ function pgPotaZemin_Self_OnShow(e) {
         this.actionBar.visible = true;
         this.actionBar.backgroundColor = '#F2F2F2';
         this.actionBar.displayShowTitleEnabled = true;
-        this.actionBar.title = 'Sahalar';
+        this.actionBar.title = 'Sahalar v' + Application.version;
         this.actionBar.subtitle = 'Zemin-Pota-Çevre';
         this.actionBar.displayShowHomeEnabled = true;
         this.actionBar.icon = 'icon.png';
@@ -44,12 +44,12 @@ function pgPotaZemin_Self_OnShow(e) {
         }
         var item1 = new SMF.UI.Android.MenuItem({
                 id : '1',
-                title : 'İleri',
+                title : 'İLERİ',
                 showAsAction : SMF.UI.Android.ShowAsAction.ifRoom,
                 onSelected : function (e) {
                     //TODO: change this with service usage and validations
-                    //runValidationBasketFloorSecurity();
-                    Pages.pgTakePhotos.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
+                    runValidationBasketFloorSecurity();
+                    //Pages.pgTakePhotos.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
                 }
             });
         this.actionBar.menuItems = [item1];
@@ -59,8 +59,8 @@ function pgPotaZemin_Self_OnShow(e) {
                 title : "İleri",
                 onSelected : function () {
                     //TODO: change this with service usage and validations
-                    //runValidationBasketFloorSecurity();
-                    Pages.pgTakePhotos.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
+                    runValidationBasketFloorSecurity();
+                    //Pages.pgTakePhotos.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
                 }
             });
         this.navigationItem.rightBarButtonItems = [item1];
@@ -74,6 +74,9 @@ function pgPotaZemin_Self_OnShow(e) {
     }
     addCourtJSON.latitude = myLat;
     addCourtJSON.longitude = myLng;
+    if (isMyCheckUpdate) {
+        myCheckUpdate();
+    }
 }
 function pgPotaZemin_txtBasketQuality_OnPressed(e) {
     var basketQualityText = Pages.pgPotaZemin.cntCourtForm.cntBasketQuality.edtBasketQuality.text.split(": ");

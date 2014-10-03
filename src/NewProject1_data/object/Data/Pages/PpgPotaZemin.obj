@@ -3,7 +3,7 @@
 	<POS Pos="3" SMode="32" />
 	<BODY>
 		<CONTAINER ID="6280DA34-9A3C-4D8B-B864-94E9934ABF0B" Nm="cntCourtForm" Vsb="1" TouchEnabled="1" AutoSize="0">
-			<LCT X="50%" Y="0%" W="900%" H="900%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+			<LCT X="50%" Y="0%" W="900%" H="980%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 			<Layout LayoutType="1" LayoutOrientation="1" LayoutAlignment="0" LayoutHorizontalGap="0" LayoutVerticalGap="10" />
 			<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 			<ITEMS>

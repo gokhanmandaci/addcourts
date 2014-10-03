@@ -1,5 +1,7 @@
 function Global_Events_OnStart(e) {
     changeLang(Device.language, true);
+    isMyCheckUpdate = true;
+    myCheckUpdate();
     //      Uncomment following block for navigationbar/actionbar sample. Read the JS code file for usage.
     //        Also uncomment related block in Page1
     /*
@@ -14,6 +16,7 @@ function Global_Events_OnStart(e) {
 }
 //image selector
 include('services.js');
+var isMyCheckUpdate = false;
 var whichImage = 0;
 var yesNoArr = ["Evet", "Hayır"];
 var openHoursArr = ["24 Saat Açık", "17.00", "18.00", "19.00", "20.00", "21.00", "22.00", "23.00", "24.00"];
@@ -41,7 +44,7 @@ function Global_Events_OnLocationChanged(e) {
     myLng = e.lng;
 }
 function openCameraAndCrop(_whichPhoto) {
-    var format = SMF.ImageFormat;
+    var format = SMF.ImageFormat.JPEG;
     var compRate = 0.5;
     SMF.Multimedia.startCamera(1, 0, 1,
         function () {},
@@ -77,13 +80,14 @@ function openCameraAndCrop(_whichPhoto) {
                                             Pages.pgTakePhotos.cntMain.cntSub.cntThirdPhoto.imgBtnThirdPhoto.defaultImage = e.image;
                                         }
                                         //TODO: Uncomment this for using upload service
-                                        /*addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
+                                        addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
                                         if (Device.deviceOS == "Android") {
                                             addImage.request = new SMF.IO.File(e.image);
+                                            alert(addImage.request);
                                         } else {
                                             addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
                                         }
-                                        addImage.run(true);*/
+                                        addImage.run(true);
                                     },
                                     onError : function (e) {
                                         alert("Hata 1");
@@ -107,7 +111,7 @@ function openCameraAndCrop(_whichPhoto) {
         function () {});
 }
 function openCameraAndResize() {
-    var format = SMF.ImageFormat;
+    var format = SMF.ImageFormat.JPEG;
     var compRate = 0.7;
     var imWidth;
     var imHeight;
@@ -129,14 +133,15 @@ function openCameraAndResize() {
                         compressionRate : compRate,
                         onSuccess : function (e) {
                             Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.defaultImage = e.image;
-                            addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
+                            addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=true";
                             //TODO: Uncomment this for using upload service
-                            /*if (Device.deviceOS == "Android") {
+                            if (Device.deviceOS == "Android") {
                                 addImage.request = new SMF.IO.File(e.image);
+                                alert(addImage.request);
                             } else {
                                 addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
                             }
-                            addImage.run(true);*/
+                            addImage.run(true);
                         },
                         onError : function (e) {
                             alert("Error: " + e.message);
@@ -168,4 +173,66 @@ function calcCrow(lat1, lon1, lat2, lon2) {
 // Converts numeric degrees to radians
 function toRad(Value) {
     return Value * Math.PI / 180;
+}
+function resetAllFields() {
+    Pages.pgAddInformation.cntCourtForm.cntBasketCount.edtBasketCount.text = "";
+    Pages.pgAddInformation.cntCourtForm.cntCategory.edtCategory.text = "";
+    Pages.pgAddInformation.cntCourtForm.cntDescription.edtDescription.text = "";
+    Pages.pgAddInformation.cntCourtForm.cntHasLighting.edtHasLighting.text = "";
+    Pages.pgAddInformation.cntCourtForm.cntIsIndoor.edtIsIndoor.text = "";
+    Pages.pgAddInformation.cntCourtForm.cntName.edtName.text = "";
+    Pages.pgAddInformation.cntCourtForm.cntOpenHours.edtOpenHours.text = "";
+    Pages.pgAddInformation.cntCourtForm.cntPublicAccessible.edtPublicAccessible.text = "";
+    Pages.pgPotaZemin.cntCourtForm.cntBasketQuality.edtBasketQuality.text = "";
+    Pages.pgPotaZemin.cntCourtForm.cntFloorQuality.edtFloorQuality.text = "";
+    Pages.pgPotaZemin.cntCourtForm.cntSecurity.edtSecurity.text = "";
+    Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.defaultImage = "placeholder_main_photo.png";
+    Pages.pgTakePhotos.cntMain.cntSub.cntFirstPhoto.imgBtnFirstPhoto.defaultImage = "placeholder_sub_photos.png";
+    Pages.pgTakePhotos.cntMain.cntSub.cntSecondPhoto.imgBtnSecondPhoto.defaultImage = "placeholder_sub_photos.png";
+    Pages.pgTakePhotos.cntMain.cntSub.cntThirdPhoto.imgBtnThirdPhoto.defaultImage = "placeholder_sub_photos.png";
+    alert({
+            title : 'Bilgilendirme',
+            message : "Saha ve fotoğraflar başarıyla eklendi.",
+            firstButtonText : "Tamam",
+            OnFirstButtonPressed : function () {
+                Pages.pgAddInformation.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.leftToRight, SMF.UI.TransitionEffectType.cover, false, false);
+            }
+        });
+}
+//checkUpdate
+function myCheckUpdate() {
+    SES.checkUpdate(function (e) {
+        if (isMyCheckUpdate) {
+            isMyCheckUpdate = false;
+            if (e.latestVersion > Application.version && e.isMandatory == true) {
+                alert({
+                    title : 'Bilgilendirme',
+                    message : 'Yeni bir sürüm eklendi. Uygulamaya devam etmek için, güncel versiyonu yüklemeniz gerekmektedir.',
+                    firstButtonText : "İndir",
+                    OnFirstButtonPressed : function () {
+                        SMF.Net.browseOut("http://dl.smartface.io/102203");
+                    }
+                });
+            } else if (e.latestVersion > Application.version) {
+                alert({
+                    title : 'Bilgilendirme',
+                    message : 'Yeni bir sürüm eklendi. Yeni özellikleri kullanabilmeniz için, güncel versiyonu yüklemeniz önerilir.',
+                    firstButtonText : "İndir",
+                    secondButtonText : "Devam",
+                    OnFirstButtonPressed : function () {
+                        SMF.Net.browseOut("http://dl.smartface.io/102203");
+                    },
+                    OnSecondButtonPressed : function () {
+                        //bos
+                    }
+                });
+            }
+        }
+    }, function () {
+        //bos
+    });
+}
+function Global_Events_OnMaximize(e){
+    isMyCheckUpdate = true;
+    myCheckUpdate();
 }

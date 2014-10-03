@@ -17,13 +17,6 @@
 							<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 							<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 							<ITEMS>
-								<PIC ID="98FE39BF-138F-432A-821F-28FA8F8A988F" Nm="imgMainPhoto" Vsb="1" Alpha="100" TouchEnabled="1">
-									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-									<POS Pos="15" SMode="2" EnableZoom="0" EnableScroll="0" EnableCache="0" />
-									<DATA>
-										<PRM Nm="Bind" Val="resources://placeholder_main_photo.png" />
-									</DATA>
-								</PIC>
 								<BTN ID="4913CE04-2DAD-4DB0-AA7B-3534C357B648" Nm="imgBtnMainPhoto" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" Type="0">
 									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 									<FONT FName="Default" FSize="8p" FColor="333333" PressedFColor="ffffff" DisabledFColor="ff0000" FStyle="0" Undrln="0" />
@@ -62,13 +55,6 @@
 							<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 							<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 							<ITEMS>
-								<PIC ID="5BE11DCA-228E-487F-91D9-04370DA069F0" Nm="imgFirstPhoto" Vsb="1" Alpha="100" TouchEnabled="1">
-									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-									<POS Pos="15" SMode="64" EnableZoom="0" EnableScroll="0" EnableCache="0" />
-									<DATA>
-										<PRM Nm="Bind" Val="resources://placeholder_sub_photos.png" />
-									</DATA>
-								</PIC>
 								<BTN ID="0D617D59-02EA-4E34-B8BB-1D1F3D49B4C4" Nm="imgBtnFirstPhoto" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" Type="0">
 									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 									<FONT FName="Default" FSize="8p" FColor="333333" PressedFColor="ffffff" DisabledFColor="ff0000" FStyle="0" Undrln="0" />
@@ -100,13 +86,6 @@
 							<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 							<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 							<ITEMS>
-								<PIC ID="923A528F-942E-4A50-B119-D2F0FAADBEEE" Nm="imgSecondPhoto" Vsb="1" Alpha="100" TouchEnabled="1">
-									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-									<POS Pos="15" SMode="64" EnableZoom="0" EnableScroll="0" EnableCache="0" />
-									<DATA>
-										<PRM Nm="Bind" Val="resources://placeholder_sub_photos.png" />
-									</DATA>
-								</PIC>
 								<BTN ID="0DB694F4-4E83-4F6E-9202-D829E79CE46A" Nm="imgBtnSecondPhoto" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" Type="0">
 									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 									<FONT FName="Default" FSize="8p" FColor="333333" PressedFColor="ffffff" DisabledFColor="ff0000" FStyle="0" Undrln="0" />
@@ -138,13 +117,6 @@
 							<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 							<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 							<ITEMS>
-								<PIC ID="66175164-0640-48DF-87D2-F67BCA41FC6F" Nm="imgThirdPhoto" Vsb="1" Alpha="100" TouchEnabled="1">
-									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
-									<POS Pos="15" SMode="64" EnableZoom="0" EnableScroll="0" EnableCache="0" />
-									<DATA>
-										<PRM Nm="Bind" Val="resources://placeholder_sub_photos.png" />
-									</DATA>
-								</PIC>
 								<BTN ID="BCDB3F5E-D33E-4A66-85FE-EE2298E00D21" Nm="imgBtnThirdPhoto" Vsb="1" Alpha="100" Enb="1" TouchEnabled="1" Type="0">
 									<LCT X="0%" Y="0%" W="1000%" H="1000%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 									<FONT FName="Default" FSize="8p" FColor="333333" PressedFColor="ffffff" DisabledFColor="ff0000" FStyle="0" Undrln="0" />

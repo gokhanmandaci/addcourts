@@ -8,7 +8,7 @@ function pgTakePhotos_Self_OnShow(e) {
         this.actionBar.visible = true;
         this.actionBar.backgroundColor = '#F2F2F2';
         this.actionBar.displayShowTitleEnabled = true;
-        this.actionBar.title = 'Sahalar';
+        this.actionBar.title = 'Sahalar v' + Application.version;
         this.actionBar.subtitle = 'Saha Fotoğrafları';
         this.actionBar.displayShowHomeEnabled = true;
         this.actionBar.icon = 'icon.png';
@@ -18,24 +18,15 @@ function pgTakePhotos_Self_OnShow(e) {
         }
         var item1 = new SMF.UI.Android.MenuItem({
                 id : '1',
-                title : 'Ekle',
+                title : 'TAMAMLA',
                 showAsAction : SMF.UI.Android.ShowAsAction.ifRoom,
                 onSelected : function (e) {
-                    //TODO: Show court information and wait for acceptance and then call add court service.
-                    alert("Eklendi");
+                    resetAllFields();
                 }
             });
         this.actionBar.menuItems = [item1];
     } else {
         this.navigationItem.title = "Saha Fotoğrafları";
-        var item1 = new SMF.UI.iOS.BarButtonItem({
-                title : "Ekle",
-                onSelected : function () {
-                    //TODO: Show court information and wait for acceptance and then call add court service.
-                    alert("Eklendi");
-                }
-            });
-        this.navigationItem.rightBarButtonItems = [item1];
         var item2 = new SMF.UI.iOS.BarButtonItem({
                 title : "Geri",
                 onSelected : function () {

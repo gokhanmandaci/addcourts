@@ -20,7 +20,7 @@
 	</FLURRYANALYTICS>
 	<LOGGING LogServerUrl="" MaxLogSize="30" LogError="0" LogWarning="0" LogDebug="0">
 	</LOGGING>
-	<SESANALYTICS SESAPIKey="SES.8obinex.anaLYt1cs201e" SESAPIURL="http://analytics.smartface.io/api/AnalyticsData/" />
+	<SESANALYTICS SESAPIKey="md_JGoQ2L0mgVDfHu6OMHA" SESAPIURL="http://analytics.smartface.io/api/AnalyticsData/" />
 	<PAGES>
 		<PG ID="00000000-0000-0000-0000-000000000002" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="SplashPage" BgClr="ffffff" BgTparent="0" BgPicName="default_splash.png" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="0" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="1" ShwNavigationBar="0" ShwActionBar="0" TouchEnabled="1">
 			<EDGE X="0" Y="0" W="640" H="1136" />

@@ -20,10 +20,11 @@
 	</FLURRYANALYTICS>
 	<LOGGING LogServerUrl="" MaxLogSize="30" LogError="0" LogWarning="0" LogDebug="0">
 	</LOGGING>
-	<SESANALYTICS SESAPIKey="SES.8obinex.anaLYt1cs201e" SESAPIURL="http://analytics.smartface.io/api/AnalyticsData/" />
+	<SESANALYTICS SESAPIKey="md_JGoQ2L0mgVDfHu6OMHA" SESAPIURL="http://analytics.smartface.io/api/AnalyticsData/" />
 	<GLOBALEVENTS>
 		<ONSTART script="Global_Events_OnStart(e);" />
 		<ONLOCATIONCHANGED script="Global_Events_OnLocationChanged(e);" />
+		<ONMAXIMIZE script="Global_Events_OnMaximize(e);" />
 		<ONERROR script="Global_Events_OnError(e);" />
 	</GLOBALEVENTS>
 </PROJECT>

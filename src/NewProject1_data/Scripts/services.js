@@ -39,7 +39,7 @@ var addCourtData = new SMF.Net.WebClient({
         },
         onServerError : function (e) {
             //TODO: Show server error
-            alert("error");
+            alert("error" + this.status);
         },
         timeOutInterval : addCourtData.timeout
     });
@@ -54,7 +54,6 @@ var addImage = new SMF.Net.WebClient({
         requestHeaders : addImageRequestHeaders,
         contentType : "image/jpeg",
         onSyndicationSuccess : function (e) {
-            alert("Succ");
             Dialogs.dgUploading.close();
         },
         onServerError : function (e) {
