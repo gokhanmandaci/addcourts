@@ -26,14 +26,14 @@ function changeLang(languageCode, doNotify) {
             "sureToDelete" : "Are you sure to delete?",
             "networkError": "There has been a network error, please try again later",
             "applicationError": "There has been an unhandled application error, please inform developers",
-	    	"delete":"Delete"
+            "delete":"Delete"
         };
         break;
     case "tr":
         lang = {
             "cancel" : "İptal",
             "copy" : "Kopyala",
-            "done" : "Yapıldı",
+            "done" : "Tamam",
             "copyURL" : "Adresi Kopyala",
             "cut" : "Kes",
             "no" : "Hayır",
@@ -45,7 +45,7 @@ function changeLang(languageCode, doNotify) {
             "sureToDelete" : "Silmek istediğinize emin misiniz?",
             "networkError": "Bir ağ bağlantı hatası oluştu, lütfen daha sonra tekrar deneyiniz",
             "applicationError": "Beklenmeyen bir hata oluştu, lütfen geliştiricileri bilgilendiriniz",
-	    	"delete":"Sil"
+            "delete":"Sil"
         };
         break;
     case "de":

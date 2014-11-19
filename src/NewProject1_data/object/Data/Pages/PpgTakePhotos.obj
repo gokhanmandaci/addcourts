@@ -1,5 +1,5 @@
 <PG ID="382BFB75-FE66-4864-9530-59196E924205" Type="0" UsesTemplatePage="0" TemplatePageID="00000000-0000-0000-0000-100000000001" Nm="pgTakePhotos" BgClr="999999" BgTparent="0" BgPicName="" DefFoc="00000000-0000-0000-0000-100000000001" SldEffect="0" SldEase="0" Blr="0" ShwStatusBar="1" EnableTabBar="0" LockOrientation="0" PageOrientation="0" IsTemplatePage="0" IsSplashScreen="0" ShwNavigationBar="1" ShwActionBar="1" TouchEnabled="1">
-	<EDGE X="0" Y="0" W="640" H="1136" />
+	<EDGE X="0" Y="0" W="720" H="1280" />
 	<POS Pos="13" SMode="32" />
 	<BODY>
 		<CONTAINER ID="7166C219-943B-449D-A226-9D077FE217F1" Nm="cntMain" Vsb="1" TouchEnabled="1" AutoSize="0">

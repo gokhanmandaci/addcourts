@@ -1,6 +1,7 @@
 function pgTakePhotos_Self_OnKeyPress(e) {
     if (e.keyCode == 4) {
-        Pages.back();
+        resetAllFields();
+        Pages.back(Pages.pgAddInformation);
     }
 }
 function pgTakePhotos_Self_OnShow(e) {
@@ -16,35 +17,37 @@ function pgTakePhotos_Self_OnShow(e) {
         this.actionBar.onHomeIconItemSelected = function () {
             Pages.back();
         }
-        var item1 = new SMF.UI.Android.MenuItem({
+        var itmFinish = new SMF.UI.Android.MenuItem({
                 id : '1',
-                title : 'TAMAMLA',
-                showAsAction : SMF.UI.Android.ShowAsAction.ifRoom,
+                title : 'BİTTİ',
+                showAsAction : SMF.UI.Android.ShowAsAction.always,
                 onSelected : function (e) {
                     resetAllFields();
+                    Pages.back(Pages.pgAddInformation);
                 }
             });
-        this.actionBar.menuItems = [item1];
+        this.actionBar.menuItems = [itmFinish];
     } else {
         this.navigationItem.title = "Saha Fotoğrafları";
         var item2 = new SMF.UI.iOS.BarButtonItem({
                 title : "Geri",
                 onSelected : function () {
-                    Pages.back();
+                    resetAllFields();
+                    Pages.back(Pages.pgAddInformation);
                 }
             });
         this.navigationItem.leftBarButtonItems = [item2];
     }
 }
-function pgTakePhotos_imgBtnMainPhoto_OnPressed(e){
+function pgTakePhotos_imgBtnMainPhoto_OnPressed(e) {
     openCameraAndResize();
 }
-function pgTakePhotos_imgBtnFirstPhoto_OnPressed(e){
+function pgTakePhotos_imgBtnFirstPhoto_OnPressed(e) {
     openCameraAndCrop(0);
 }
-function pgTakePhotos_imgBtnSecondPhoto_OnPressed(e){
+function pgTakePhotos_imgBtnSecondPhoto_OnPressed(e) {
     openCameraAndCrop(1);
 }
-function pgTakePhotos_imgBtnThirdPhoto_OnPressed(e){
+function pgTakePhotos_imgBtnThirdPhoto_OnPressed(e) {
     openCameraAndCrop(2);
 }

@@ -9,6 +9,15 @@ function runValidationBasketFloorSecurity() {
     if (Pages.pgPotaZemin.cntCourtForm.cntSecurity.edtSecurity.text == "") {
         alertStr += "Lütfen güvenlik kalitesini derecelendiriniz. \n\n";
     }
+    if (Pages.pgPotaZemin.cntCourtForm.cntFloorType.edtFloorType.text == "") {
+        alertStr += "Lütfen zemin tipini giriniz. \n\n";
+    }
+    if (Pages.pgPotaZemin.cntCourtForm.cntLineQuality.edtLineQuality.text == "") {
+        alertStr += "Lütfen çizgi kalitesini derecelendiriniz. \n\n";
+    }
+    if (Pages.pgPotaZemin.cntCourtForm.cntWireFence.edtWireFence.text == "") {
+        alertStr += "Lütfen sahayı çevreleyen çit bulunuyor mu alanını doldurunuz. \n\n";
+    }
     if (alertStr != "") {
         alert({
             title : 'Uyarı',
@@ -113,6 +122,45 @@ function pgPotaZemin_txtSecurity_OnPressed(e) {
         function (e) {
         Pages.pgPotaZemin.cntCourtForm.cntSecurity.edtSecurity.text = "Güvenlik: " + qualityArr[e.index];
         addCourtJSON.properties.security = qualityArr[e.index];
+    },
+        function () {},
+        function () {});
+}
+function pgPotaZemin_txtFloorType_OnPressed(e){
+    var floorTypeText = Pages.pgPotaZemin.cntCourtForm.cntFloorType.edtFloorType.text.split(": ");
+    var floorTypeIndex;
+    floorTypeIndex = floorType.indexOf(floorTypeText[1]);
+    pick(
+        floorType, floorTypeIndex,
+        function (e) {
+        Pages.pgPotaZemin.cntCourtForm.cntFloorType.edtFloorType.text = "Zemin Tipi: " + floorType[e.index];
+        addCourtJSON.properties.floorType = floorType[e.index];
+    },
+        function () {},
+        function () {});
+}
+function pgPotaZemin_txtLineQuality_OnPressed(e){
+    var lineQualityText = Pages.pgPotaZemin.cntCourtForm.cntLineQuality.edtLineQuality.text.split(": ");
+    var lineQualityIndex;
+    lineQualityIndex = qualityArr.indexOf(lineQualityText[1]);
+    pick(
+        qualityArr, lineQualityIndex,
+        function (e) {
+        Pages.pgPotaZemin.cntCourtForm.cntLineQuality.edtLineQuality.text = "Saha Çizgi Kalitesi: " + qualityArr[e.index];
+        addCourtJSON.properties.lineQuality = qualityArr[e.index];
+    },
+        function () {},
+        function () {});
+}
+function pgPotaZemin_txtWireFence_OnPressed(e){
+    var wireFenceText = Pages.pgPotaZemin.cntCourtForm.cntWireFence.edtWireFence.text.split(": ");
+    var wireFenceIndex;
+    wireFenceIndex = yesNoArr.indexOf(wireFenceText[1]);
+    pick(
+        yesNoArr, wireFenceIndex,
+        function (e) {
+        Pages.pgPotaZemin.cntCourtForm.cntWireFence.edtWireFence.text = "Tel Örgü: " + yesNoArr[e.index];
+        addCourtJSON.properties.wireFence = yesNoArr[e.index];
     },
         function () {},
         function () {});

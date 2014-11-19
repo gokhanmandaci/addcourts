@@ -1,18 +1,8 @@
 function Global_Events_OnStart(e) {
     changeLang(Device.language, true);
+    Device.setGPSStatus(true);
     isMyCheckUpdate = true;
     myCheckUpdate();
-    //      Uncomment following block for navigationbar/actionbar sample. Read the JS code file for usage.
-    //        Also uncomment related block in Page1
-    /*
-    load("HeaderBar.js");
-    header = new HeaderBar();
-    /**/
-    //      Uncomment following block for menu sample. Read the JS code file for usage.
-    /*
-    load("Menu.js");
-    /**/
-    Device.setGPSStatus(1);
 }
 //image selector
 include('services.js');
@@ -21,7 +11,8 @@ var whichImage = 0;
 var yesNoArr = ["Evet", "Hayır"];
 var openHoursArr = ["24 Saat Açık", "17.00", "18.00", "19.00", "20.00", "21.00", "22.00", "23.00", "24.00"];
 var isIndoorArr = ["Açık", "Kapalı"];
-var categoryArr = ["Park", "Site içi", "Lise", "Üniversite", "Spor Salonu"];
+var floorType = ["Asfalt", "Parke", "Diğer"];
+var categoryArr = ["Park", "Site içi", "Lise", "Üniversite", "Spor Salonu", "Fitness Salonu"];
 var qualityArr = ["1", "2", "3", "4", "5"];
 var basketCountArr = ["1", "2", "3", "4", "4+"];
 var courtID;
@@ -37,11 +28,12 @@ function Global_Events_OnError(e) {
         break;
     }
 }
-var myLat = null;
-var myLng = null;
+var myLat = 0;
+var myLng = 0;
 function Global_Events_OnLocationChanged(e) {
     myLat = e.lat;
     myLng = e.lng;
+    alert(myLat, myLng);
 }
 function openCameraAndCrop(_whichPhoto) {
     var format = SMF.ImageFormat.JPEG;
@@ -73,17 +65,19 @@ function openCameraAndCrop(_whichPhoto) {
                                     onSuccess : function (e) {
                                         Dialogs.dgUploading.show();
                                         if (_whichPhoto == 0) {
+                                            imageIndex = 1;
                                             Pages.pgTakePhotos.cntMain.cntSub.cntFirstPhoto.imgBtnFirstPhoto.defaultImage = e.image;
                                         } else if (_whichPhoto == 1) {
+                                            imageIndex = 2;
                                             Pages.pgTakePhotos.cntMain.cntSub.cntSecondPhoto.imgBtnSecondPhoto.defaultImage = e.image;
                                         } else {
+                                            imageIndex = 3;
                                             Pages.pgTakePhotos.cntMain.cntSub.cntThirdPhoto.imgBtnThirdPhoto.defaultImage = e.image;
                                         }
                                         //TODO: Uncomment this for using upload service
-                                        addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
+                                        addImage.URL = "http://104.236.32.113:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
                                         if (Device.deviceOS == "Android") {
                                             addImage.request = new SMF.IO.File(e.image);
-                                            alert(addImage.request);
                                         } else {
                                             addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
                                         }
@@ -132,12 +126,13 @@ function openCameraAndResize() {
                         format : format,
                         compressionRate : compRate,
                         onSuccess : function (e) {
+                            Dialogs.dgUploading.show();
+                            imageIndex = 0;
                             Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.defaultImage = e.image;
-                            addImage.URL = "http://212.174.34.90:9998/hooper-rest/courts/" + courtID + "/images?isCover=true";
+                            addImage.URL = "http://104.236.32.113:9998/hooper-rest/courts/" + courtID + "/images?isCover=true";
                             //TODO: Uncomment this for using upload service
                             if (Device.deviceOS == "Android") {
                                 addImage.request = new SMF.IO.File(e.image);
-                                alert(addImage.request);
                             } else {
                                 addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
                             }
@@ -186,18 +181,21 @@ function resetAllFields() {
     Pages.pgPotaZemin.cntCourtForm.cntBasketQuality.edtBasketQuality.text = "";
     Pages.pgPotaZemin.cntCourtForm.cntFloorQuality.edtFloorQuality.text = "";
     Pages.pgPotaZemin.cntCourtForm.cntSecurity.edtSecurity.text = "";
+    Pages.pgPotaZemin.cntCourtForm.cntFloorType.edtFloorType.text = "";
+    Pages.pgPotaZemin.cntCourtForm.cntLineQuality.edtLineQuality.text = "";
+    Pages.pgPotaZemin.cntCourtForm.cntWireFence.edtWireFence.text = "";
     Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.defaultImage = "placeholder_main_photo.png";
     Pages.pgTakePhotos.cntMain.cntSub.cntFirstPhoto.imgBtnFirstPhoto.defaultImage = "placeholder_sub_photos.png";
     Pages.pgTakePhotos.cntMain.cntSub.cntSecondPhoto.imgBtnSecondPhoto.defaultImage = "placeholder_sub_photos.png";
     Pages.pgTakePhotos.cntMain.cntSub.cntThirdPhoto.imgBtnThirdPhoto.defaultImage = "placeholder_sub_photos.png";
     alert({
-            title : 'Bilgilendirme',
-            message : "Saha ve fotoğraflar başarıyla eklendi.",
-            firstButtonText : "Tamam",
-            OnFirstButtonPressed : function () {
-                Pages.pgAddInformation.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.leftToRight, SMF.UI.TransitionEffectType.cover, false, false);
-            }
-        });
+        title : 'Bilgilendirme',
+        message : "Saha ve fotoğraflar başarıyla eklendi.",
+        firstButtonText : "Tamam",
+        OnFirstButtonPressed : function () {
+            Pages.pgAddInformation.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.leftToRight, SMF.UI.TransitionEffectType.cover, false, false);
+        }
+    });
 }
 //checkUpdate
 function myCheckUpdate() {
@@ -232,7 +230,7 @@ function myCheckUpdate() {
         //bos
     });
 }
-function Global_Events_OnMaximize(e){
+function Global_Events_OnMaximize(e) {
     isMyCheckUpdate = true;
     myCheckUpdate();
 }
