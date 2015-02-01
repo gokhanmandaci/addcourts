@@ -15,6 +15,7 @@ function pgTakePhotos_Self_OnShow(e) {
         this.actionBar.icon = 'icon.png';
         this.actionBar.displayHomeAsUpEnabled = true;
         this.actionBar.onHomeIconItemSelected = function () {
+            resetAllFields();
             Pages.back();
         }
         var itmFinish = new SMF.UI.Android.MenuItem({
@@ -33,7 +34,7 @@ function pgTakePhotos_Self_OnShow(e) {
                 title : "Geri",
                 onSelected : function () {
                     resetAllFields();
-                    Pages.back(Pages.pgAddInformation);
+                    Pages.back();
                 }
             });
         this.navigationItem.leftBarButtonItems = [item2];

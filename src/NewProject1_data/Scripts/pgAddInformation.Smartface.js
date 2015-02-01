@@ -157,11 +157,15 @@ function pgAddInformation_txtBasketCount_OnPressed(e) {
         function () {});
 }
 function pgAddInformation_edtName_OnExit(e) {
-    if (Pages.pgAddInformation.svCourtForm.cntCourtForm.cntName.edtName.text != "") {
-        addCourtJSON.name = Pages.pgAddInformation.svCourtForm.cntCourtForm.cntName.edtName.text;
+    try {
+        if (Pages.pgAddInformation.svCourtForm.cntCourtForm.cntName.edtName.text != "") {
+            addCourtJSON.name = Pages.pgAddInformation.svCourtForm.cntCourtForm.cntName.edtName.text;
+        }
+    } catch (ex) {
+        alert(ex);
     }
 }
-function pgAddInformation_edtDescription_OnExit(e){
+function pgAddInformation_edtDescription_OnExit(e) {
     if (Pages.pgAddInformation.svCourtForm.cntCourtForm.cntDescription.edtDescription.text != "") {
         addCourtJSON.properties.description = Pages.pgAddInformation.svCourtForm.cntCourtForm.cntDescription.edtDescription.text;
     }

@@ -1,11 +1,3 @@
-function Global_Events_OnStart(e) {
-    changeLang(Device.language, true);
-    Device.setGPSStatus(true);
-    isMyCheckUpdate = true;
-    myCheckUpdate();
-}
-//image selector
-include('services.js');
 var isMyCheckUpdate = false;
 var whichImage = 0;
 var yesNoArr = ["Evet", "Hayır"];
@@ -16,6 +8,14 @@ var categoryArr = ["Park", "Site içi", "Lise", "Üniversite", "Spor Salonu", "F
 var qualityArr = ["1", "2", "3", "4", "5"];
 var basketCountArr = ["1", "2", "3", "4", "4+"];
 var courtID;
+function Global_Events_OnStart(e) {
+    changeLang(Device.language, true);
+    SES.Configuration.useAnalytics = true;
+    Device.setGPSStatus(true);
+    include("services.js");
+    isMyCheckUpdate = true;
+    myCheckUpdate();
+}
 function Global_Events_OnError(e) {
     switch (e.type) {
     case "Server Error":
@@ -33,7 +33,7 @@ var myLng = 0;
 function Global_Events_OnLocationChanged(e) {
     myLat = e.lat;
     myLng = e.lng;
-    alert(myLat, myLng);
+    //alert(myLat, myLng);
 }
 function openCameraAndCrop(_whichPhoto) {
     var format = SMF.ImageFormat.JPEG;
@@ -75,7 +75,7 @@ function openCameraAndCrop(_whichPhoto) {
                                             Pages.pgTakePhotos.cntMain.cntSub.cntThirdPhoto.imgBtnThirdPhoto.defaultImage = e.image;
                                         }
                                         //TODO: Uncomment this for using upload service
-                                        addImage.URL = "http://104.236.32.113:9998/hooper-rest/courts/" + courtID + "/images?isCover=false";
+                                        addImage.URL = "http://hooper.zone/hooper-rest/courts/" + courtID + "/images?isCover=false";
                                         if (Device.deviceOS == "Android") {
                                             addImage.request = new SMF.IO.File(e.image);
                                         } else {
@@ -98,7 +98,7 @@ function openCameraAndCrop(_whichPhoto) {
                     }
                 });
         } catch (ex) {
-            alert(ex);
+            //alert(ex);
         }
     },
         function () {},
@@ -112,41 +112,45 @@ function openCameraAndResize() {
     SMF.Multimedia.startCamera(1, 0, 1,
         function () {},
         function (e) {
-        var im = new SMF.Image({
-                imageUri : e.photoUri,
-                onSuccess : function (e) {
-                    imWidth = im.width;
-                    imHeight = im.height;
-                    var pageImageWitdh = Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.width;
-                    var resizedHeight = (imHeight / imWidth) * pageImageWitdh;
-                    var resizedHeightRounded = Math.floor(resizedHeight);
-                    im.resize({
-                        width : pageImageWitdh,
-                        height : resizedHeightRounded,
-                        format : format,
-                        compressionRate : compRate,
-                        onSuccess : function (e) {
-                            Dialogs.dgUploading.show();
-                            imageIndex = 0;
-                            Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.defaultImage = e.image;
-                            addImage.URL = "http://104.236.32.113:9998/hooper-rest/courts/" + courtID + "/images?isCover=true";
-                            //TODO: Uncomment this for using upload service
-                            if (Device.deviceOS == "Android") {
-                                addImage.request = new SMF.IO.File(e.image);
-                            } else {
-                                addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
+        try {
+            var im = new SMF.Image({
+                    imageUri : e.photoUri,
+                    onSuccess : function (e) {
+                        imWidth = im.width;
+                        imHeight = im.height;
+                        var pageImageWitdh = Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.width;
+                        var resizedHeight = (imHeight / imWidth) * pageImageWitdh;
+                        var resizedHeightRounded = Math.floor(resizedHeight);
+                        im.resize({
+                            width : pageImageWitdh,
+                            height : resizedHeightRounded,
+                            format : format,
+                            compressionRate : compRate,
+                            onSuccess : function (e) {
+                                Dialogs.dgUploading.show();
+                                imageIndex = 0;
+                                Pages.pgTakePhotos.cntMain.cntHead.cntMainPhoto.imgBtnMainPhoto.defaultImage = e.image;
+                                addImage.URL = "http://hooper.zone/hooper-rest/courts/" + courtID + "/images?isCover=true";
+                                //TODO: Uncomment this for using upload service
+                                if (Device.deviceOS == "Android") {
+                                    addImage.request = new SMF.IO.File(e.image);
+                                } else {
+                                    addImage.request = new SMF.IO.File(SMF.IO.applicationDataDirectory, e.image);
+                                }
+                                addImage.run(true);
+                            },
+                            onError : function (e) {
+                                alert("Error: " + e.message);
                             }
-                            addImage.run(true);
-                        },
-                        onError : function (e) {
-                            alert("Error: " + e.message);
-                        }
-                    });
-                },
-                onError : function (e) {
-                    alert("Error: " + e.message);
-                }
-            });
+                        });
+                    },
+                    onError : function (e) {
+                        alert("Error: " + e.message);
+                    }
+                });
+        } catch (ex) {
+            //alert(ex);
+        }
     },
         function () {},
         function () {});
@@ -170,14 +174,14 @@ function toRad(Value) {
     return Value * Math.PI / 180;
 }
 function resetAllFields() {
-    Pages.pgAddInformation.cntCourtForm.cntBasketCount.edtBasketCount.text = "";
-    Pages.pgAddInformation.cntCourtForm.cntCategory.edtCategory.text = "";
-    Pages.pgAddInformation.cntCourtForm.cntDescription.edtDescription.text = "";
-    Pages.pgAddInformation.cntCourtForm.cntHasLighting.edtHasLighting.text = "";
-    Pages.pgAddInformation.cntCourtForm.cntIsIndoor.edtIsIndoor.text = "";
-    Pages.pgAddInformation.cntCourtForm.cntName.edtName.text = "";
-    Pages.pgAddInformation.cntCourtForm.cntOpenHours.edtOpenHours.text = "";
-    Pages.pgAddInformation.cntCourtForm.cntPublicAccessible.edtPublicAccessible.text = "";
+    Pages.pgAddInformation.svCourtForm.cntCourtForm.cntBasketCount.edtBasketCount.text = "";
+    Pages.pgAddInformation.svCourtForm.cntCourtForm.cntCategory.edtCategory.text = "";
+    Pages.pgAddInformation.svCourtForm.cntCourtForm.cntDescription.edtDescription.text = "";
+    Pages.pgAddInformation.svCourtForm.cntCourtForm.cntHasLighting.edtHasLighting.text = "";
+    Pages.pgAddInformation.svCourtForm.cntCourtForm.cntIsIndoor.edtIsIndoor.text = "";
+    Pages.pgAddInformation.svCourtForm.cntCourtForm.cntName.edtName.text = "";
+    Pages.pgAddInformation.svCourtForm.cntCourtForm.cntOpenHours.edtOpenHours.text = "";
+    Pages.pgAddInformation.svCourtForm.cntCourtForm.cntPublicAccessible.edtPublicAccessible.text = "";
     Pages.pgPotaZemin.cntCourtForm.cntBasketQuality.edtBasketQuality.text = "";
     Pages.pgPotaZemin.cntCourtForm.cntFloorQuality.edtFloorQuality.text = "";
     Pages.pgPotaZemin.cntCourtForm.cntSecurity.edtSecurity.text = "";

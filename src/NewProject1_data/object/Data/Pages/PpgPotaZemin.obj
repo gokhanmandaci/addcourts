@@ -35,7 +35,7 @@
 					</ITEMS>
 				</CONTAINER>
 				<CONTAINER ID="7BB81045-9CB6-44AB-8198-0118F2DB5649" Nm="cntFloorQuality" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="114" W="1000%" H="101%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<LCT X="50%" Y="126" W="1000%" H="101%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
@@ -62,7 +62,7 @@
 					</ITEMS>
 				</CONTAINER>
 				<CONTAINER ID="B2A481C8-8BF5-4DC1-AC5E-505E077E596F" Nm="cntFloorType" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="221" W="1000%" H="101%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<LCT X="50%" Y="245" W="1000%" H="101%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
@@ -89,7 +89,7 @@
 					</ITEMS>
 				</CONTAINER>
 				<CONTAINER ID="5E8C47AB-0820-40CE-8727-EC5B6E037AD8" Nm="cntLineQuality" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="328" W="1000%" H="101%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<LCT X="50%" Y="364" W="1000%" H="101%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
@@ -116,7 +116,7 @@
 					</ITEMS>
 				</CONTAINER>
 				<CONTAINER ID="64280DC4-FD82-4B37-B3E5-AF34BE35125E" Nm="cntWireFence" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="435" W="1000%" H="101%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<LCT X="50%" Y="483" W="1000%" H="101%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>
@@ -143,7 +143,7 @@
 					</ITEMS>
 				</CONTAINER>
 				<CONTAINER ID="F76762B3-F9F5-4FF7-9B92-646C9851AA3F" Nm="cntSecurity" Vsb="1" TouchEnabled="1" AutoSize="0">
-					<LCT X="50%" Y="542" W="1000%" H="101%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
+					<LCT X="50%" Y="602" W="1000%" H="101%" Z="0" Anc="3" LockAutoSize="0" LockAutoPosition="0" />
 					<Layout LayoutType="0" LayoutOrientation="0" LayoutAlignment="0" LayoutHorizontalGap="-1" LayoutVerticalGap="-1" />
 					<STYLE BrClr="313031" BrW="0" BgTparent="1" BgClr="eff3ef" />
 					<ITEMS>

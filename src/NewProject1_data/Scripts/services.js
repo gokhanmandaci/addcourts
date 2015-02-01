@@ -22,7 +22,11 @@ var addCourtJSON = {
         "basketCount" : "",
         "floorType" : "",
         "lineQuality" : "",
-        "wireFence" : ""
+        "wireFence" : "",
+        "address" : "",
+        "county" : "",
+        "city" : "",
+        "country" : ""
     }
 };
 var addCourtData = {
@@ -32,7 +36,7 @@ var addCourtData = {
 var addCourtResponseObj;
 //ADD COURT Service Integration
 var addCourtData = new SMF.Net.WebClient({
-        URL : 'http://104.236.32.113:9998/hooper-rest/courts/',
+        URL : 'http://hooper.zone/hooper-rest/courts/',
         httpMethod : "POST",
         requestHeaders : commonRequestHeaders,
         contentType : "application/json",
@@ -90,6 +94,7 @@ var addImage = new SMF.Net.WebClient({
                     var item1 = new SMF.UI.iOS.BarButtonItem({
                             title : "Bitti",
                             onSelected : function () {
+                                resetAllFields();
                                 Pages.back(Pages.pgAddInformation);
                             }
                         });

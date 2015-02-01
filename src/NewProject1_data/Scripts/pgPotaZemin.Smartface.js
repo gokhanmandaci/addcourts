@@ -30,6 +30,7 @@ function runValidationBasketFloorSecurity() {
     } else {
         Dialogs.dgWait.show();
         addCourtData.requestString = JSON.stringify(addCourtJSON);
+        alert(addCourtData.requestString);
         addCourtData.run(true);
     }
 }
@@ -83,6 +84,18 @@ function pgPotaZemin_Self_OnShow(e) {
     }
     addCourtJSON.latitude = myLat;
     addCourtJSON.longitude = myLng;
+    SMF.Map.lookupAddress(parseFloat(addCourtJSON.latitude), parseFloat(addCourtJSON.longitude),
+        function (e) {
+            addCourtJSON.properties.address = e.results[0].addressValue;
+            var countyNameArr = e.results[4].addressValue.split(",");
+            addCourtJSON.properties.county = countyNameArr[0];
+            var seperator = e.results[5].addressValue.split(",");
+            addCourtJSON.properties.city = seperator[0];
+            addCourtJSON.properties.country = seperator[1];
+    },
+        function (e) {
+        //alert("onError");
+    });
     if (isMyCheckUpdate) {
         myCheckUpdate();
     }
@@ -126,7 +139,7 @@ function pgPotaZemin_txtSecurity_OnPressed(e) {
         function () {},
         function () {});
 }
-function pgPotaZemin_txtFloorType_OnPressed(e){
+function pgPotaZemin_txtFloorType_OnPressed(e) {
     var floorTypeText = Pages.pgPotaZemin.cntCourtForm.cntFloorType.edtFloorType.text.split(": ");
     var floorTypeIndex;
     floorTypeIndex = floorType.indexOf(floorTypeText[1]);
@@ -139,7 +152,7 @@ function pgPotaZemin_txtFloorType_OnPressed(e){
         function () {},
         function () {});
 }
-function pgPotaZemin_txtLineQuality_OnPressed(e){
+function pgPotaZemin_txtLineQuality_OnPressed(e) {
     var lineQualityText = Pages.pgPotaZemin.cntCourtForm.cntLineQuality.edtLineQuality.text.split(": ");
     var lineQualityIndex;
     lineQualityIndex = qualityArr.indexOf(lineQualityText[1]);
@@ -152,7 +165,7 @@ function pgPotaZemin_txtLineQuality_OnPressed(e){
         function () {},
         function () {});
 }
-function pgPotaZemin_txtWireFence_OnPressed(e){
+function pgPotaZemin_txtWireFence_OnPressed(e) {
     var wireFenceText = Pages.pgPotaZemin.cntCourtForm.cntWireFence.edtWireFence.text.split(": ");
     var wireFenceIndex;
     wireFenceIndex = yesNoArr.indexOf(wireFenceText[1]);
