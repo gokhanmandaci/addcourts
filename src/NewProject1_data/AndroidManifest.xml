@@ -4,7 +4,7 @@
       android:versionCode="1"
       android:versionName="${Version}"
       android:installLocation="auto" >
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="15" />
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="21" />
    <!-- Required for SEND_SMS function. -->
     <uses-permission android:name="android.permission.SEND_SMS" />
     <!-- Required for phone call functions. -->
@@ -68,15 +68,21 @@
 
     ${supportsScreens}
 
-    <application android:icon="@drawable/icon" android:label="${ApplicationName}" android:largeHeap="true">
+    <application android:icon="@drawable/icon" android:label="${ApplicationName}" android:largeHeap="true" android:name="android.support.multidex.MultiDexApplication">
         <activity android:name=".A" 
             android:label="${ApplicationName}" 	
             android:configChanges="keyboardHidden|orientation|screenSize" 
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan"
 			android:screenOrientation="${Orientation}"
 			android:theme="@style/AppTheme"
             >
+            
+            <intent-filter>
+              <action android:name="android.intent.action.SEARCH" />
+          </intent-filter>
+          <meta-data android:name="android.app.searchable"
+                   android:resource="@xml/searchable"/> 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -179,5 +185,22 @@
         <meta-data
 		   android:name="com.google.android.maps.v2.API_KEY"
 		   android:value="AIzaSyDYMd2n7_RAVBu-lacJ1FaJtgZWIeDcBUg"/>
+		   
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+ 
+        <service android:name="com.geniem.sprat.notifications.LocalNotificationService"
+                 android:enabled="true" />
+         
+        <receiver android:name="com.geniem.sprat.notifications.LocalNotificationReceiver"/>
+        
+        <service android:name="com.geniem.sprat.notifications.NLService"
+            android:enabled="true"
+          android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+     		<intent-filter>
+         		<action android:name="android.service.notification.NotificationListenerService" />
+     		</intent-filter>
+ 		</service>
+		
     </application>
 </manifest>

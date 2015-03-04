@@ -37,11 +37,21 @@ function runValidationAddInformation() {
         Pages.pgPotaZemin.show(SMF.UI.MotionEase.decelerating, SMF.UI.TransitionEffect.rightToLeft, SMF.UI.TransitionEffectType.cover, false, false);
     }
 }
+/**
+* Creates action(s) that are run when the user press the key of the devices.
+* @param {KeyCodeEventArguments} e Uses to for key code argument. It returns e.keyCode parameter.
+* @this SMF.UI.Page
+*/
 function pgAddInformation_Self_OnKeyPress(e) {
     if (e.keyCode === 4) {
         Application.exit();
     }
 }
+/**
+* Creates action(s) that are run when the page is appeared
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.Page
+*/
 function pgAddInformation_Self_OnShow() {
     if (Device.deviceOS == "Android") {
         this.actionBar.visible = true;
@@ -78,6 +88,11 @@ function pgAddInformation_Self_OnShow() {
         myCheckUpdate();
     }
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgAddInformation_txtPublicSelector_OnPressed(e) {
     var isPublicText = Pages.pgAddInformation.svCourtForm.cntCourtForm.cntPublicAccessible.edtPublicAccessible.text.split(": ");
     var isPublicIndex;
@@ -86,11 +101,19 @@ function pgAddInformation_txtPublicSelector_OnPressed(e) {
         yesNoArr, isPublicIndex,
         function (e) {
         Pages.pgAddInformation.svCourtForm.cntCourtForm.cntPublicAccessible.edtPublicAccessible.text = "Halka açık mı: " + yesNoArr[e.index];
-        addCourtJSON.properties.isPublicAccessible = yesNoArr[e.index];
+        if(yesNoArr[e.index] == 'Evet')
+            addCourtJSON.properties.isPublicAccessible = true;
+        else
+            addCourtJSON.properties.isPublicAccessible = false;
     },
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgAddInformation_txtOpenHoursSelector_OnPressed(e) {
     var openHoursText = Pages.pgAddInformation.svCourtForm.cntCourtForm.cntOpenHours.edtOpenHours.text.split(": ");
     var openHoursIndex;
@@ -99,11 +122,16 @@ function pgAddInformation_txtOpenHoursSelector_OnPressed(e) {
         openHoursArr, openHoursIndex,
         function (e) {
         Pages.pgAddInformation.svCourtForm.cntCourtForm.cntOpenHours.edtOpenHours.text = "Kapanış saati: " + openHoursArr[e.index];
-        addCourtJSON.properties.openHours = openHoursArr[e.index];
+        addCourtJSON.properties.openHours = openHoursEnumArr[e.index];
     },
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgAddInformation_txtIsIndoorSelector_OnPressed(e) {
     var indoorText = Pages.pgAddInformation.svCourtForm.cntCourtForm.cntIsIndoor.edtIsIndoor.text.split(": ");
     var indoorIndex;
@@ -112,11 +140,19 @@ function pgAddInformation_txtIsIndoorSelector_OnPressed(e) {
         isIndoorArr, indoorIndex,
         function (e) {
         Pages.pgAddInformation.svCourtForm.cntCourtForm.cntIsIndoor.edtIsIndoor.text = "Saha tipi: " + isIndoorArr[e.index];
-        addCourtJSON.properties.isIndoor = isIndoorArr[e.index];
+        if(isIndoorArr[e.index] = 'Kapalı')
+            addCourtJSON.properties.isIndoor = true;
+        else
+            addCourtJSON.properties.isIndoor = false;
     },
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgAddInformation_txtHasLightingSelector_OnPressed(e) {
     var hasLightingText = Pages.pgAddInformation.svCourtForm.cntCourtForm.cntHasLighting.edtHasLighting.text.split(": ");
     var hasLightingIndex;
@@ -125,11 +161,19 @@ function pgAddInformation_txtHasLightingSelector_OnPressed(e) {
         yesNoArr, hasLightingIndex,
         function (e) {
         Pages.pgAddInformation.svCourtForm.cntCourtForm.cntHasLighting.edtHasLighting.text = "Işıklandırması var mı: " + yesNoArr[e.index];
-        addCourtJSON.properties.hasLighting = yesNoArr[e.index];
+        if(yesNoArr[e.index] == 'Evet')
+            addCourtJSON.properties.hasLighting = true;
+        else
+            addCourtJSON.properties.hasLighting = false;
     },
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgAddInformation_txtCategorySelector_OnPressed(e) {
     var categoryText = Pages.pgAddInformation.svCourtForm.cntCourtForm.cntCategory.edtCategory.text.split(": ");
     var categoryIndex;
@@ -138,11 +182,16 @@ function pgAddInformation_txtCategorySelector_OnPressed(e) {
         categoryArr, categoryIndex,
         function (e) {
         Pages.pgAddInformation.svCourtForm.cntCourtForm.cntCategory.edtCategory.text = "Mekan: " + categoryArr[e.index];
-        addCourtJSON.properties.category = categoryArr[e.index];
+        addCourtJSON.properties.category = categoryEnumArr[e.index];
     },
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgAddInformation_txtBasketCount_OnPressed(e) {
     var basketCountText = Pages.pgAddInformation.svCourtForm.cntCourtForm.cntBasketCount.edtBasketCount.text.split(": ");
     var basketCountIndex;
@@ -156,6 +205,11 @@ function pgAddInformation_txtBasketCount_OnPressed(e) {
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the user exits an input to the edit box.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.EditBox
+*/
 function pgAddInformation_edtName_OnExit(e) {
     try {
         if (Pages.pgAddInformation.svCourtForm.cntCourtForm.cntName.edtName.text != "") {
@@ -165,6 +219,11 @@ function pgAddInformation_edtName_OnExit(e) {
         alert(ex);
     }
 }
+/**
+* Creates action(s) that are run when the user exits an input to the edit box.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.EditBox
+*/
 function pgAddInformation_edtDescription_OnExit(e) {
     if (Pages.pgAddInformation.svCourtForm.cntCourtForm.cntDescription.edtDescription.text != "") {
         addCourtJSON.properties.description = Pages.pgAddInformation.svCourtForm.cntCourtForm.cntDescription.edtDescription.text;

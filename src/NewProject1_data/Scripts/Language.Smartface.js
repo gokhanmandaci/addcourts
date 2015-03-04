@@ -12,9 +12,9 @@ function changeLang(languageCode, doNotify) {
     switch (languageCode) {
     case "en":
         lang = {
-            "cancel" : "Cancel",
+            "cancel" : " Cancel",
             "copy" : "Copy",
-            "done" : "Done",
+            "done" : " Done",
             "copyURL" : "Copy URL",
             "cut" : "Cut",
             "no" : "No",

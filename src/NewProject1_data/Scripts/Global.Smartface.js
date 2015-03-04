@@ -2,11 +2,15 @@ var isMyCheckUpdate = false;
 var whichImage = 0;
 var yesNoArr = ["Evet", "Hayır"];
 var openHoursArr = ["24 Saat Açık", "17.00", "18.00", "19.00", "20.00", "21.00", "22.00", "23.00", "24.00"];
+var openHoursEnumArr = [0,1,2,3,4,5,6,7,8];
 var isIndoorArr = ["Açık", "Kapalı"];
 var floorType = ["Asfalt", "Parke", "Diğer"];
+var floorEnumArr = [0,1,2];
 var categoryArr = ["Park", "Site içi", "Lise", "Üniversite", "Spor Salonu", "Fitness Salonu"];
+var categoryEnumArr = [0,1,2,3,4,5];
 var qualityArr = ["1", "2", "3", "4", "5"];
 var basketCountArr = ["1", "2", "3", "4", "4+"];
+
 var courtID;
 function Global_Events_OnStart(e) {
     changeLang(Device.language, true);

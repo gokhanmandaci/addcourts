@@ -1,9 +1,19 @@
+/**
+* Creates action(s) that are run when the user press the key of the devices.
+* @param {KeyCodeEventArguments} e Uses to for key code argument. It returns e.keyCode parameter.
+* @this SMF.UI.Page
+*/
 function pgTakePhotos_Self_OnKeyPress(e) {
     if (e.keyCode == 4) {
         resetAllFields();
         Pages.back(Pages.pgAddInformation);
     }
 }
+/**
+* Creates action(s) that are run when the page is appeared
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.Page
+*/
 function pgTakePhotos_Self_OnShow(e) {
     if (Device.deviceOS == "Android") {
         this.actionBar.visible = true;
@@ -40,15 +50,35 @@ function pgTakePhotos_Self_OnShow(e) {
         this.navigationItem.leftBarButtonItems = [item2];
     }
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.ImageButton
+*/
 function pgTakePhotos_imgBtnMainPhoto_OnPressed(e) {
     openCameraAndResize();
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.ImageButton
+*/
 function pgTakePhotos_imgBtnFirstPhoto_OnPressed(e) {
     openCameraAndCrop(0);
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.ImageButton
+*/
 function pgTakePhotos_imgBtnSecondPhoto_OnPressed(e) {
     openCameraAndCrop(1);
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.ImageButton
+*/
 function pgTakePhotos_imgBtnThirdPhoto_OnPressed(e) {
     openCameraAndCrop(2);
 }

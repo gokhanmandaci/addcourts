@@ -30,15 +30,24 @@ function runValidationBasketFloorSecurity() {
     } else {
         Dialogs.dgWait.show();
         addCourtData.requestString = JSON.stringify(addCourtJSON);
-        alert(addCourtData.requestString);
         addCourtData.run(true);
     }
 }
+/**
+* Creates action(s) that are run when the user press the key of the devices.
+* @param {KeyCodeEventArguments} e Uses to for key code argument. It returns e.keyCode parameter.
+* @this SMF.UI.Page
+*/
 function pgPotaZemin_Self_OnKeyPress(e) {
     if (e.keyCode == 4) {
         Pages.back();
     }
 }
+/**
+* Creates action(s) that are run when the page is appeared
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.Page
+*/
 function pgPotaZemin_Self_OnShow(e) {
     if (Device.deviceOS == "Android") {
         this.actionBar.visible = true;
@@ -100,6 +109,11 @@ function pgPotaZemin_Self_OnShow(e) {
         myCheckUpdate();
     }
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgPotaZemin_txtBasketQuality_OnPressed(e) {
     var basketQualityText = Pages.pgPotaZemin.cntCourtForm.cntBasketQuality.edtBasketQuality.text.split(": ");
     var basketQualityIndex;
@@ -113,6 +127,11 @@ function pgPotaZemin_txtBasketQuality_OnPressed(e) {
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgPotaZemin_txtFloorQuality_OnPressed(e) {
     var floorQualityText = Pages.pgPotaZemin.cntCourtForm.cntFloorQuality.edtFloorQuality.text.split(": ");
     var floorQualityIndex;
@@ -126,6 +145,11 @@ function pgPotaZemin_txtFloorQuality_OnPressed(e) {
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgPotaZemin_txtSecurity_OnPressed(e) {
     var securityText = Pages.pgPotaZemin.cntCourtForm.cntSecurity.edtSecurity.text.split(": ");
     var securityIndex;
@@ -139,6 +163,11 @@ function pgPotaZemin_txtSecurity_OnPressed(e) {
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgPotaZemin_txtFloorType_OnPressed(e) {
     var floorTypeText = Pages.pgPotaZemin.cntCourtForm.cntFloorType.edtFloorType.text.split(": ");
     var floorTypeIndex;
@@ -147,11 +176,16 @@ function pgPotaZemin_txtFloorType_OnPressed(e) {
         floorType, floorTypeIndex,
         function (e) {
         Pages.pgPotaZemin.cntCourtForm.cntFloorType.edtFloorType.text = "Zemin Tipi: " + floorType[e.index];
-        addCourtJSON.properties.floorType = floorType[e.index];
+        addCourtJSON.properties.floorType = floorEnumArr[e.index];
     },
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgPotaZemin_txtLineQuality_OnPressed(e) {
     var lineQualityText = Pages.pgPotaZemin.cntCourtForm.cntLineQuality.edtLineQuality.text.split(": ");
     var lineQualityIndex;
@@ -165,6 +199,11 @@ function pgPotaZemin_txtLineQuality_OnPressed(e) {
         function () {},
         function () {});
 }
+/**
+* Creates action(s) that are run when the object is pressed from device's screen.
+* @param {EventArguments} e Returns some attributes about the specified functions
+* @this SMF.UI.TextButton
+*/
 function pgPotaZemin_txtWireFence_OnPressed(e) {
     var wireFenceText = Pages.pgPotaZemin.cntCourtForm.cntWireFence.edtWireFence.text.split(": ");
     var wireFenceIndex;
@@ -173,7 +212,10 @@ function pgPotaZemin_txtWireFence_OnPressed(e) {
         yesNoArr, wireFenceIndex,
         function (e) {
         Pages.pgPotaZemin.cntCourtForm.cntWireFence.edtWireFence.text = "Tel Örgü: " + yesNoArr[e.index];
-        addCourtJSON.properties.wireFence = yesNoArr[e.index];
+        if(yesNoArr[e.index] == 'Evet')
+            addCourtJSON.properties.wireFence = true;
+        else
+            addCourtJSON.properties.wireFence = false;
     },
         function () {},
         function () {});
